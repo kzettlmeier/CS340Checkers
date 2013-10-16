@@ -1,15 +1,17 @@
+/*
+ * This starts the application
+ */
+
 #include "mainwindow.h"
 #include <QApplication>
-#include "board.h"
+
+using namespace std;
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
-
-    Board board;
-    board.displayBoard();
 
     return a.exec();
 }
