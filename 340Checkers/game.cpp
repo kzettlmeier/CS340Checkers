@@ -10,6 +10,7 @@
 
 #include "game.h"
 #include <iostream>
+#include <sstream>
 
 using namespace std;
 
@@ -885,4 +886,344 @@ bool Game::canJumpPlayer(char *currentPos)
         return false;
     }
     return false;
+}
+
+//Method to check if the player can jump another player
+string Game::jumpPos(char *currentPos)
+{
+    //Get current dimensions for board
+    int currentFirstDimension = currentPos[0] - '0';
+    int currentSecondDimension = convertCharDimensionToInt(currentPos[1]);
+
+    //Grab the current piece to check if its a king or regular piece
+    char currentPiece = board[currentFirstDimension][currentSecondDimension];
+
+    //Using current piece find out if there is another piece that can be jumped
+    //Check player 1 reg
+    if (currentPiece == 'o')
+    {
+        //Check for a opponent piece in an adjacent spot above current piece and to the left
+        int opponentSpotFirstDimension = currentFirstDimension - 1;
+        int opponentSpotSecondDimension = currentSecondDimension - 1;
+        //Check to make sure not out of bounds
+        if (opponentSpotFirstDimension >= 0 || opponentSpotSecondDimension >= 0 || opponentSpotSecondDimension < 8 ||
+                opponentSpotFirstDimension - 1 >= 0 || opponentSpotSecondDimension - 1 >= 0 ||
+                opponentSpotSecondDimension - 1 < 8)
+        {
+            //Check to see if there is an opponent here
+            if (board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'x' ||
+                    board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'X')
+            {
+                //Now check if the piece on the corner is available
+                if (board[opponentSpotFirstDimension-1][opponentSpotSecondDimension-1] == ' ')
+                {
+                    //Get new position
+                    char column = convertIntToChar(opponentSpotSecondDimension-1);
+                    ostringstream np;
+                    np << opponentSpotFirstDimension-1 << column;
+                    return np.str();
+                }
+            }
+        }
+        //Check for a opponent piece in an adjacent spot above current piece and to the right
+        opponentSpotSecondDimension = currentSecondDimension + 1;
+        //Check to make sure not out of bounds
+        if (opponentSpotFirstDimension >= 0 || opponentSpotSecondDimension >= 0 || opponentSpotSecondDimension < 8 ||
+                opponentSpotFirstDimension - 1 >= 0 || opponentSpotSecondDimension + 1 >= 0 ||
+                opponentSpotSecondDimension + 1 < 8)
+        {
+            //Check to see if there is an opponent here
+            if (board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'x' ||
+                    board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'X')
+            {
+                //Now check if the piece on the corner is available
+                if (board[opponentSpotFirstDimension-1][opponentSpotSecondDimension+1] == ' ')
+                {
+                    //Get new position
+                    char column = convertIntToChar(opponentSpotSecondDimension+1);
+                    ostringstream np;
+                    np << opponentSpotFirstDimension-1 << column;
+                    return np.str();
+                }
+            }
+        }
+        //Else there is no opponent
+        return "";
+    }
+    //Check player 1 king
+    else if (currentPiece == 'O')
+    {
+        //Check for a opponent piece in an adjacent spot above current piece and to the left
+        int opponentSpotFirstDimension = currentFirstDimension - 1;
+        int opponentSpotSecondDimension = currentSecondDimension - 1;
+        //Check to make sure not out of bounds
+        if (opponentSpotFirstDimension >= 0 || opponentSpotSecondDimension >= 0 || opponentSpotSecondDimension < 8 ||
+                opponentSpotFirstDimension - 1 >= 0 || opponentSpotSecondDimension - 1 >= 0 ||
+                opponentSpotSecondDimension - 1 < 8)
+        {
+            //Check to see if there is an opponent here
+            if (board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'x' ||
+                    board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'X')
+            {
+                //Now check if the piece on the corner is available
+                if (board[opponentSpotFirstDimension-1][opponentSpotSecondDimension-1] == ' ')
+                {
+                    //Get new position
+                    char column = convertIntToChar(opponentSpotSecondDimension-1);
+                    ostringstream np;
+                    np << opponentSpotFirstDimension-1 << column;
+                    return np.str();
+                }
+            }
+        }
+        //Check for a opponent piece in an adjacent spot above current piece and to the right
+        opponentSpotSecondDimension = currentSecondDimension + 1;
+        //Check to make sure not out of bounds
+        if (opponentSpotFirstDimension >= 0 || opponentSpotSecondDimension >= 0 || opponentSpotSecondDimension < 8 ||
+                opponentSpotFirstDimension - 1 >= 0 || opponentSpotSecondDimension + 1 >= 0 ||
+                opponentSpotSecondDimension + 1 < 8)
+        {
+            //Check to see if there is an opponent here
+            if (board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'x' ||
+                    board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'X')
+            {
+                //Now check if the piece on the corner is available
+                if (board[opponentSpotFirstDimension-1][opponentSpotSecondDimension+1] == ' ')
+                {
+                    //Get new position
+                    char column = convertIntToChar(opponentSpotSecondDimension+1);
+                    ostringstream np;
+                    np << opponentSpotFirstDimension-1 << column;
+                    return np.str();
+                }
+            }
+        }
+        //Check for a opponent piece in an adjacent spot below current piece and to the left
+        opponentSpotFirstDimension = currentFirstDimension + 1;
+        opponentSpotSecondDimension = currentSecondDimension - 1;
+        //Check to make sure not out of bounds
+        if (opponentSpotFirstDimension <= 7 || opponentSpotSecondDimension >= 0 || opponentSpotSecondDimension < 8 ||
+                opponentSpotFirstDimension + 1 >= 0 || opponentSpotSecondDimension - 1 >= 0 ||
+                opponentSpotSecondDimension - 1 < 8)
+        {
+            //Check to see if there is an opponent here
+            if (board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'x' ||
+                    board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'X')
+            {
+                //Now check if the piece on the corner is available
+                if (board[opponentSpotFirstDimension+1][opponentSpotSecondDimension-1] == ' ')
+                {
+                    //Get new position
+                    char column = convertIntToChar(opponentSpotSecondDimension-1);
+                    ostringstream np;
+                    np << opponentSpotFirstDimension+1 << column;
+                    return np.str();
+                }
+            }
+        }
+        //Check for a opponent piece in an adjacent spot below current piece and to the right
+        opponentSpotSecondDimension = currentSecondDimension + 1;
+        //Check to make sure not out of bounds
+        if (opponentSpotFirstDimension >= 0 || opponentSpotSecondDimension >= 0 || opponentSpotSecondDimension < 8 ||
+                opponentSpotFirstDimension + 1 >= 0 || opponentSpotSecondDimension + 1 >= 0 ||
+                opponentSpotSecondDimension + 1 < 8)
+        {
+            //Check to see if there is an opponent here
+            if (board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'x' ||
+                    board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'X')
+            {
+                //Now check if the piece on the corner is available
+                if (board[opponentSpotFirstDimension+1][opponentSpotSecondDimension+1] == ' ')
+                {
+                    //Get new position
+                    char column = convertIntToChar(opponentSpotSecondDimension+1);
+                    ostringstream np;
+                    np << opponentSpotFirstDimension+1 << column;
+                    return np.str();
+                }
+            }
+        }
+        //Else there is no opponent
+        return "";
+    }
+    //Check if player 2 reg
+    else if (currentPiece == 'x')
+    {
+        //Check for a opponent piece in an adjacent spot below current piece and to the left
+        int opponentSpotFirstDimension = currentFirstDimension + 1;
+        int opponentSpotSecondDimension = currentSecondDimension - 1;
+        //Check to make sure not out of bounds
+        if (opponentSpotFirstDimension <= 7 || opponentSpotSecondDimension >= 0 || opponentSpotSecondDimension < 8 ||
+                opponentSpotFirstDimension + 1 >= 0 || opponentSpotSecondDimension - 1 >= 0 ||
+                opponentSpotSecondDimension - 1 < 8)
+        {
+            //Check to see if there is an opponent here
+            if (board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'o' ||
+                    board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'O')
+            {
+                //Now check if the piece on the corner is available
+                if (board[opponentSpotFirstDimension+1][opponentSpotSecondDimension-1] == ' ')
+                {
+                    //Get new position
+                    char column = convertIntToChar(opponentSpotSecondDimension-1);
+                    ostringstream np;
+                    np << opponentSpotFirstDimension+1 << column;
+                    return np.str();
+                }
+            }
+        }
+        //Check for a opponent piece in an adjacent spot below current piece and to the right
+        opponentSpotSecondDimension = currentSecondDimension + 1;
+        //Check to make sure not out of bounds
+        if (opponentSpotFirstDimension >= 0 || opponentSpotSecondDimension >= 0 || opponentSpotSecondDimension < 8 ||
+                opponentSpotFirstDimension + 1 >= 0 || opponentSpotSecondDimension + 1 >= 0 ||
+                opponentSpotSecondDimension + 1 < 8)
+        {
+            //Check to see if there is an opponent here
+            if (board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'o' ||
+                    board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'O')
+            {
+                //Now check if the piece on the corner is available
+                if (board[opponentSpotFirstDimension+1][opponentSpotSecondDimension+1] == ' ')
+                {
+                    //Get new position
+                    char column = convertIntToChar(opponentSpotSecondDimension+1);
+                    ostringstream np;
+                    np << opponentSpotFirstDimension+1 << column;
+                    return np.str();
+                }
+            }
+        }
+        //Else there is no opponent
+        return "";
+    }
+    //Check if player 2 king
+    else if (currentPiece == 'X')
+    {
+        //Check for a opponent piece in an adjacent spot below current piece and to the left
+        int opponentSpotFirstDimension = currentFirstDimension + 1;
+        int opponentSpotSecondDimension = currentSecondDimension - 1;
+        //Check to make sure not out of bounds
+        if (opponentSpotFirstDimension <= 7 || opponentSpotSecondDimension >= 0 || opponentSpotSecondDimension < 8 ||
+                opponentSpotFirstDimension + 1 >= 0 || opponentSpotSecondDimension - 1 >= 0 ||
+                opponentSpotSecondDimension - 1 < 8)
+        {
+            //Check to see if there is an opponent here
+            if (board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'o' ||
+                    board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'O')
+            {
+                //Now check if the piece on the corner is available
+                if (board[opponentSpotFirstDimension+1][opponentSpotSecondDimension-1] == ' ')
+                {
+                    //Get new position
+                    char column = convertIntToChar(opponentSpotSecondDimension-1);
+                    ostringstream np;
+                    np << opponentSpotFirstDimension+1 << column;
+                    return np.str();
+                }
+            }
+        }
+        //Check for a opponent piece in an adjacent spot below current piece and to the right
+        opponentSpotSecondDimension = currentSecondDimension + 1;
+        //Check to make sure not out of bounds
+        if (opponentSpotFirstDimension >= 0 || opponentSpotSecondDimension >= 0 || opponentSpotSecondDimension < 8 ||
+                opponentSpotFirstDimension + 1 >= 0 || opponentSpotSecondDimension + 1 >= 0 ||
+                opponentSpotSecondDimension + 1 < 8)
+        {
+            //Check to see if there is an opponent here
+            if (board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'o' ||
+                    board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'O')
+            {
+                //Now check if the piece on the corner is available
+                if (board[opponentSpotFirstDimension+1][opponentSpotSecondDimension+1] == ' ')
+                {
+                    //Get new position
+                    char column = convertIntToChar(opponentSpotSecondDimension+1);
+                    ostringstream np;
+                    np << opponentSpotFirstDimension+1 << column;
+                    return np.str();
+                }
+            }
+        }
+        //Check for a opponent piece in an adjacent spot above current piece and to the left
+        opponentSpotFirstDimension = currentFirstDimension - 1;
+        opponentSpotSecondDimension = currentSecondDimension - 1;
+        //Check to make sure not out of bounds
+        if (opponentSpotFirstDimension >= 0 || opponentSpotSecondDimension >= 0 || opponentSpotSecondDimension < 8 ||
+                opponentSpotFirstDimension - 1 >= 0 || opponentSpotSecondDimension - 1 >= 0 ||
+                opponentSpotSecondDimension - 1 < 8)
+        {
+            //Check to see if there is an opponent here
+            if (board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'o' ||
+                    board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'O')
+            {
+                //Now check if the piece on the corner is available
+                if (board[opponentSpotFirstDimension-1][opponentSpotSecondDimension-1] == ' ')
+                {
+                    //Get new position
+                    char column = convertIntToChar(opponentSpotSecondDimension-1);
+                    ostringstream np;
+                    np << opponentSpotFirstDimension-1 << column;
+                    return np.str();
+                }
+            }
+        }
+        //Check for a opponent piece in an adjacent spot above current piece and to the right
+        opponentSpotSecondDimension = currentSecondDimension + 1;
+        //Check to make sure not out of bounds
+        if (opponentSpotFirstDimension >= 0 || opponentSpotSecondDimension >= 0 || opponentSpotSecondDimension < 8 ||
+                opponentSpotFirstDimension - 1 >= 0 || opponentSpotSecondDimension + 1 >= 0 ||
+                opponentSpotSecondDimension + 1 < 8)
+        {
+            //Check to see if there is an opponent here
+            if (board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'o' ||
+                    board[opponentSpotFirstDimension][opponentSpotSecondDimension] == 'O')
+            {
+                //Now check if the piece on the corner is available
+                if (board[opponentSpotFirstDimension-1][opponentSpotSecondDimension+1] == ' ')
+                {
+                    //Get new position
+                    char column = convertIntToChar(opponentSpotSecondDimension+1);
+                    ostringstream np;
+                    np << opponentSpotFirstDimension-1 << column;
+                    return np.str();
+                }
+            }
+        }
+        //Else there is no opponent
+        return "";
+    }
+    //Else error
+    else
+    {
+        cout << "SHOULD NEVER GET HERE" << endl;
+        return "";
+    }
+    return "";
+}
+
+//Method to convert an integer to corresponding character on board
+char Game::convertIntToChar(int num)
+{
+    switch (num)
+    {
+    case 0:
+        return 'A';
+    case 1:
+        return 'B';
+    case 2:
+        return 'C';
+    case 3:
+        return 'D';
+    case 4:
+        return 'E';
+    case 5:
+        return 'F';
+    case 6:
+        return 'G';
+    case 7:
+        return 'H';
+    default:
+        return 'X';
+    }
 }

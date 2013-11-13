@@ -8,6 +8,10 @@
 #define GAME_H
 
 #include "board.h"
+#include <string.h>
+#include <iostream>
+
+using namespace std;
 
 class Game : public Board
 {
@@ -29,6 +33,8 @@ public:
     bool moveKingP2(int newFirstDimension, int currentFirstDimension, int newSecondDimension,
                     int currentSecondDimension);
     bool canJumpPlayer(char *currentPos);
+    string jumpPos(char *currentPos);
+    char convertIntToChar(int num);
 };
 
 #endif // GAME_H
