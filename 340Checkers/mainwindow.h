@@ -8,6 +8,7 @@
 
 #include <QMainWindow>
 #include "game.h"
+#include "ai.h"
 
 namespace Ui {
 class MainWindow;
@@ -21,6 +22,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     Game game;
+    AI computer;
     int playerTurn;
 
 private slots:

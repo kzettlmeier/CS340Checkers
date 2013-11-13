@@ -15,7 +15,7 @@ Board::Board()
     {
         for (int j = 0; j < BOARD_LENGTH; j++)
         {
-            //Place an X on the black spaces of the board for representation
+            //Place an # on the black spaces of the board for representation
             if ((j % 2 != 0 && i % 2 == 0) || (j % 2 == 0 && i % 2 != 0))
             {
                 board[i][j] = '#';

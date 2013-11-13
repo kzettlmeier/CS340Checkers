@@ -91,6 +91,13 @@ void MainWindow::on_SendButton_clicked()
     {
         cout << "Player " << playerTurn << " please try again" << endl;
     }
+
+    //Player 2's turn
+    if (playerTurn == 2)
+    {
+        //Check all the moves for the player
+        computer.checkAllComputerMoves();
+    }
 }
 
 void MainWindow::on_StartButton_clicked()
