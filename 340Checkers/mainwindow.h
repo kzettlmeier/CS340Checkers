@@ -7,6 +7,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QGraphicsScene>
+#include <QGraphicsView>
 #include "game.h"
 #include "ai.h"
 

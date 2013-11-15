@@ -15,13 +15,17 @@ Board::Board()
     {
         for (int j = 0; j < BOARD_LENGTH; j++)
         {
+            tiles[i][j].y = i*SQ_S;
+            tiles[i][j].x = j*SQ_S;
             //Place an # on the black spaces of the board for representation
             if ((j % 2 != 0 && i % 2 == 0) || (j % 2 == 0 && i % 2 != 0))
             {
                 board[i][j] = '#';
+                tiles[i][j].color = BLACK;
             }
             else
             {
+                tiles[i][j].color = RED;
                 //Player 2
                 if (i < 3)
                 {
@@ -66,4 +70,26 @@ void Board::displayBoard(int player1Score, int player2Score)
     cout << "Player 1 score: " << player1Score << endl;
     cout << "Player 2 score: " << player2Score << endl;
     cout << endl;
+}
+
+void Board::addGrid(QGraphicsScene *scene)
+{
+    QBrush redBrush(Qt::red);
+    QBrush blackBrush(Qt::black);
+    QPen blackPen(QColor(255, 255, 255));
+    int x,y;
+    for(int i = 0; i < 8; i++) {
+        for(int j = 0; j < 8; j++) {
+            x = tiles[i][j].x;
+            y = tiles[i][j].y;
+            //scene->foregroundBrush();
+            //scene->addRect(QRectF(x,y,SQ_S,SQ_S));
+            if (tiles[i][j].color == RED)
+                scene->addRect(x,y,SQ_S,SQ_S, blackPen, redBrush);
+            else
+                scene->addRect(x,y,SQ_S,SQ_S, blackPen, blackBrush);
+
+        }
+    }
+
 }

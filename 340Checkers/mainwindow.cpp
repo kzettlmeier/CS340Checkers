@@ -14,6 +14,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QGraphicsScene *s = new QGraphicsScene();
+    computer.addGrid(s);
+    ui->gv->setScene(s);
 }
 
 MainWindow::~MainWindow()
@@ -44,7 +47,7 @@ void MainWindow::on_SendButton_clicked()
         //Send data to board in order to move
         bool successfulTurn = computer.makeAMove(playerTurn, pieceToMove, placeToMoveTo);
         computer.displayBoard(computer.player1Score, computer.player2Score);
-
+        //computer.
         //Check for finish
         if (computer.player2Score == 0)
         {
