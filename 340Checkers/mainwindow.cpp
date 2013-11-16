@@ -165,6 +165,7 @@ void MainWindow::on_StartButton_clicked()
     //Just display the board
     game.displayBoard(game.player1Score, game.player2Score);
     //Set the player turn to player 1
+    game.updateGrid(ui->gv->scene());
     playerTurn = 1;
 }
 

@@ -93,3 +93,38 @@ void Board::addGrid(QGraphicsScene *scene)
     }
 
 }
+
+void Board::updateGrid(QGraphicsScene *scene)
+{
+    QBrush redBrush(Qt::red);
+    QBrush blackBrush(Qt::black);
+    QBrush cyan(Qt::cyan);
+    QBrush green(Qt::green);
+    QPen blackPen(QColor(255, 255, 255));
+    int x,y,xp,yp;
+    for(int i = 0; i < 8; i++) {
+        for(int j = 0; j < 8; j++) {
+            x = j*SQ_S;
+            y = i*SQ_S;
+            xp = tiles[i][j].x + SQ_S/4;
+            yp = tiles[i][j].y + SQ_S/4;
+
+            if (tiles[i][j].color == RED)
+                scene->addRect(x,y,SQ_S,SQ_S, blackPen, redBrush);
+            else
+                scene->addRect(x,y,SQ_S,SQ_S, blackPen, blackBrush);
+
+            if(board[i][j] == 'x') {
+                scene->addRect(xp,yp,SQ_S/2,SQ_S/2,blackPen,cyan);
+                cout<<"x at ("<<i<<", "<<j<<")\n"<<endl;
+            }
+            else if(board[i][j] == 'o') {
+                scene->addRect(xp,yp,SQ_S/2,SQ_S/2,blackPen,green);
+                cout<<"o at ("<<i<<", "<<j<<")\n"<<endl;
+            }
+
+        }
+    }
+
+}
+

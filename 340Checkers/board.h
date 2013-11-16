@@ -27,6 +27,7 @@ public:
     Board();
     void displayBoard(int player1Score, int player2Score);
     void addGrid(QGraphicsScene *scene);
+    void updateGrid(QGraphicsScene *scene);
 };
 
 #endif // BOARD_H
