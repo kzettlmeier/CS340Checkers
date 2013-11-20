@@ -47,6 +47,7 @@ void MainWindow::on_SendButton_clicked()
         //Send data to board in order to move
         bool successfulTurn = computer.makeAMove(playerTurn, pieceToMove, placeToMoveTo);
         computer.displayBoard(computer.player1Score, computer.player2Score);
+        computer.updateGrid(ui->gv->scene());
         //computer.
         //Check for finish
         if (computer.player2Score == 0)
@@ -117,6 +118,7 @@ void MainWindow::on_SendButton_clicked()
         //Send data to board in order to move
         bool successfulPCTurn = computer.makeAMove(playerTurn, sepPos[0], sepPos[1]);
         computer.displayBoard(computer.player1Score, computer.player2Score);
+        computer.updateGrid(ui->gv->scene());
 
         //Check for finish
         if (computer.player1Score == 0)
@@ -143,6 +145,7 @@ void MainWindow::on_SendButton_clicked()
         else
         {
             computer.anotherJump = false;
+            computer.updateGrid(ui->gv->scene());
         }
 
         //Change the player turn if successfull turn
@@ -158,6 +161,7 @@ void MainWindow::on_SendButton_clicked()
         //Remove all data from moveAvailable
         computer.removeData();
     }
+    computer.updateGrid(ui->gv->scene());
 }
 
 void MainWindow::on_StartButton_clicked()

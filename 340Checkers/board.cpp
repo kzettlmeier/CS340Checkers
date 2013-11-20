@@ -116,11 +116,11 @@ void Board::updateGrid(QGraphicsScene *scene)
 
             if(board[i][j] == 'x') {
                 scene->addRect(xp,yp,SQ_S/2,SQ_S/2,blackPen,cyan);
-                cout<<"x at ("<<i<<", "<<j<<")\n"<<endl;
+                //cout<<"x at ("<<i<<", "<<j<<")\n"<<endl;
             }
             else if(board[i][j] == 'o') {
                 scene->addRect(xp,yp,SQ_S/2,SQ_S/2,blackPen,green);
-                cout<<"o at ("<<i<<", "<<j<<")\n"<<endl;
+                //cout<<"o at ("<<i<<", "<<j<<")\n"<<endl;
             }
 
         }
