@@ -16,11 +16,13 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     board.cpp \
     game.cpp \
-    ai.cpp
+    ai.cpp \
+    tile.cpp
 
 HEADERS  += mainwindow.h \
     board.h \
     game.h \
-    ai.h
+    ai.h \
+    tile.h
 
 FORMS    += mainwindow.ui

@@ -102,6 +102,9 @@ void Board::updateGrid(QGraphicsScene *scene)
     QBrush green(Qt::green);
     QPen blackPen(QColor(255, 255, 255));
     int x,y,xp,yp;
+
+    usleep((useconds_t)150000);
+
     for(int i = 0; i < 8; i++) {
         for(int j = 0; j < 8; j++) {
             x = j*SQ_S;
@@ -127,4 +130,3 @@ void Board::updateGrid(QGraphicsScene *scene)
     }
 
 }
-

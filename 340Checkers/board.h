@@ -9,6 +9,8 @@
 #define BOARD_H
 #define SQ_S 40
 #include <QGraphicsScene>
+#include <QtGui>
+#include <unistd.h>
 
 enum color{RED,BLACK};
 typedef struct sq{
@@ -17,7 +19,7 @@ typedef struct sq{
     int color;
 }sq;
 
-class Board
+class Board : public QGraphicsView
 {
 private:
 public:

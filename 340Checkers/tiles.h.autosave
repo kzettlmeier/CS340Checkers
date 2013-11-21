@@ -1,0 +1,11 @@
+#ifndef TILES_H
+#define TILES_H
+#include <QtGui>
+#define S 40
+class tiles : public QGraphicsRectItem
+{
+    int row,col,color;
+    tiles
+}
+
+#endif // TILES_H
