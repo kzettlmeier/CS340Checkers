@@ -1,3 +1,21 @@
+/**
+ *  \file mainwindow.cpp
+ *   The main interface of the UI
+ *
+ *  This is where the UI does its work. It is used to start the game, make the moves and quitting the
+ *  application. Most of what the UI has to access, such as signals, slots, and widgets are located here.
+ *
+ *  \author Andrew Guillen
+ *  \author Shane Lopez
+ *  \author Kendall Zettlmeier
+ *  \version 1.0
+ *  \date December 2013
+ *  \bug No major bugs were found upon testing
+ *
+ *  \namespace std using namespace identifier
+ */
+
+
 /*
  * This is where all the UI does its work.
  * Starting the game as well as making the moves and quiting.
@@ -9,6 +27,14 @@
 
 using namespace std;
 
+/**
+ * @brief MainWindow::MainWindow
+ *  The main method to bring up the UI screen.
+ * @param parent
+ *
+ *  \fn addGrid creates the grid that will display the board
+ *  \param s a QGraphicsScene element
+ */
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -19,11 +45,25 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->gv->setScene(s);
 }
 
+/**
+ * @brief MainWindow::~MainWindow
+ *  Closes the UI window once the application is exited
+ */
 MainWindow::~MainWindow()
 {
     delete ui;
 }
 
+/**
+ * @brief MainWindow::on_SendButton_clicked
+ *  Sends the player's move to the game logic
+ *
+ *  This button (originally) would take the player's current piece selection
+ *  and a destination location and send the information to the game logic,
+ *  which would run and see if the move is valid or not. If a move can be made,
+ *  then the game will do the move, and update the board with the new move; otherwise,
+ *  the game will report an error message to the current player and tell them what is wrong.
+ */
 void MainWindow::on_SendButton_clicked()
 {
     if (playerTurn == 1)
@@ -164,6 +204,14 @@ void MainWindow::on_SendButton_clicked()
     computer.updateGrid(ui->gv->scene());
 }
 
+/**
+ * @brief MainWindow::on_StartButton_clicked
+ *  Button that starts the game
+ *
+ *  When the start button is clicked, the game board is initalized and the board is
+ *  created, indicating both players' pieces, and the scores of each player. Then, it
+ *  will tell player 1 to begin the game.
+ */
 void MainWindow::on_StartButton_clicked()
 {
     //Just display the board
@@ -173,6 +221,12 @@ void MainWindow::on_StartButton_clicked()
     playerTurn = 1;
 }
 
+/**
+ * @brief MainWindow::on_ExitButton_clicked
+ *  Exits the application on click
+ *
+ *  Clicking the exit button will exit the game and close the program.
+ */
 void MainWindow::on_ExitButton_clicked()
 {
     //Exit

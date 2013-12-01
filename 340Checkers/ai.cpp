@@ -1,3 +1,15 @@
+/** \file ai.cpp
+ * The ai.cpp file contains all of the information that deals with the A.I. player.
+ *
+ * It references the classes and objects that are used and defined in the game.h file
+ *
+ *  \author Andrew Guillen
+ *  \author Shane Lopez
+ *  \author Kendall Zettlmeier
+ *  \version 1.0
+ *
+ */
+
 #include "ai.h"
 #include <iostream>
 #include <string.h>
@@ -5,13 +17,24 @@
 #include <time.h>
 #include <stdlib.h>
 
+/**
+ *  \namespace std namespace identifier
+ *         Using the standard namespace convention for implementation simplicity.
+ */
 using namespace std;
 
+/**
+ * @brief AI::AI
+ */
 AI::AI()
 {
 }
 
 //Method to check all possible moves for computer
+/**
+ * @brief AI::checkAllComputerMoves
+ *      This is a method that checks all possible moves for the computer.
+ */
 void AI::checkAllComputerMoves()
 {
     cout << availableMoves.size() << endl;
@@ -347,6 +370,11 @@ void AI::checkAllComputerMoves()
 }
 
 //Method to decide which move to take
+/**
+ * @brief AI::decider
+ *      This is what allows the AI to decide which move it should take.
+ * @return
+ */
 string AI::decider()
 {
     //First check if there are any jumps
@@ -410,6 +438,12 @@ string AI::decider()
 }
 
 //Method to convert an integer to corresponding character on board
+/**
+ * @brief AI::convertIntToChar
+ *      This converts an integer to the corresponding character on the board.
+ * @param num
+ * @return
+ */
 char AI::convertIntToChar(int num)
 {
     switch (num)
@@ -436,6 +470,10 @@ char AI::convertIntToChar(int num)
 }
 
 //Remove data from moveAvailable
+/**
+ * @brief AI::removeData
+ *      Removes the data from moveAvailable, which clears the data to get newer information for a future move.
+ */
 void AI::removeData()
 {
     availableMoves.clear();

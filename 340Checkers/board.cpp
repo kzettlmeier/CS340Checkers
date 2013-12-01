@@ -1,3 +1,16 @@
+/**
+ *  \file board.cpp
+ *  This is where the board is initialized.
+ *
+ *  This contains everything that the board does, from initially generating the board to properly displaying the current board status (which is the
+ *  current move). It is constantly refreshed whenever a new move is made.
+ *
+ *  \author Andrew Guillen
+ *  \author Shane Lopez
+ *  \author Kendall Zettlmeier
+ *  \version 1.0
+ */
+
 /*
  * This is where the board is initialized
  */
@@ -5,9 +18,16 @@
 #include "board.h"
 #include <iostream>
 
+/**
+ * \namespace std
+ */
 using namespace std;
 
 //Constructor
+/**
+ * @brief Board::Board
+ *  A Board constructor that initializes the board.
+ */
 Board::Board()
 {
     //Initialize board
@@ -47,6 +67,12 @@ Board::Board()
 }
 
 //Method to display the board in command line
+/**
+ * @brief Board::displayBoard
+ *  Displays the current Board with both players' scores (the remaining pieces)
+ * @param player1Score
+ * @param player2Score
+ */
 void Board::displayBoard(int player1Score, int player2Score)
 {
     //Show the board
@@ -72,6 +98,11 @@ void Board::displayBoard(int player1Score, int player2Score)
     cout << endl;
 }
 
+/**
+ * @brief Board::addGrid
+ *  This will generate the graphical grid and create a GUI with the visual board.
+ * @param scene
+ */
 void Board::addGrid(QGraphicsScene *scene)
 {
     QBrush redBrush(Qt::red);
@@ -94,6 +125,11 @@ void Board::addGrid(QGraphicsScene *scene)
 
 }
 
+/**
+ * @brief Board::updateGrid
+ *  Updates the grid with the current turn and pieces remaining on the board.
+ * @param scene
+ */
 void Board::updateGrid(QGraphicsScene *scene)
 {
     QBrush redBrush(Qt::red);
