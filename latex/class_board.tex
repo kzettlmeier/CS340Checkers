@@ -1,0 +1,122 @@
+\hypertarget{class_board}{\section{Board Class Reference}
+\label{class_board}\index{Board@{Board}}
+}
+
+
+{\ttfamily \#include $<$board.\-h$>$}
+
+Inheritance diagram for Board\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_board}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{Board} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{Board\-::\-Board} A \hyperlink{class_board}{Board} constructor that initializes the board. \end{DoxyCompactList}\item 
+void \hyperlink{class_board_ad3e7c6a4070b1dac5b124a550fa0a6fc}{display\-Board} (int player1\-Score, int player2\-Score)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_board_ad3e7c6a4070b1dac5b124a550fa0a6fc}{Board\-::display\-Board} Displays the current \hyperlink{class_board}{Board} with both players' scores (the remaining pieces) \end{DoxyCompactList}\item 
+void \hyperlink{class_board_a799c675452ae1a6d3dd6b2058c88f92a}{add\-Grid} (Q\-Graphics\-Scene $\ast$scene)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_board_a799c675452ae1a6d3dd6b2058c88f92a}{Board\-::add\-Grid} This will generate the graphical grid and create a G\-U\-I with the visual board. \end{DoxyCompactList}\item 
+void \hyperlink{class_board_a964d67ddc797487f1a018e4c7cd82075}{update\-Grid} (Q\-Graphics\-Scene $\ast$scene)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_board_a964d67ddc797487f1a018e4c7cd82075}{Board\-::update\-Grid} Updates the grid with the current turn and pieces remaining on the board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structsq}{sq} \hyperlink{class_board_acd3e1340f25b2d2371d8a2862e473b15}{tiles} \mbox{[}8\mbox{]}\mbox{[}8\mbox{]}
+\item 
+char \hyperlink{class_board_a6e32218e7d8adc57f9d414836d135d96}{board} \mbox{[}\hyperlink{class_board_a3b3d4827430812c8849610301dbf91f3}{B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H}\mbox{]}\mbox{[}\hyperlink{class_board_a3b3d4827430812c8849610301dbf91f3}{B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H}\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_board_a3b3d4827430812c8849610301dbf91f3}{B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H} = 8
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\subsubsection[{Board}]{\setlength{\rightskip}{0pt plus 5cm}Board\-::\-Board (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_board_a9ee491d4fea680cf69b033374a9fdfcb}
+
+
+\hyperlink{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{Board\-::\-Board} A \hyperlink{class_board}{Board} constructor that initializes the board. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_board_a799c675452ae1a6d3dd6b2058c88f92a}{\index{Board@{Board}!add\-Grid@{add\-Grid}}
+\index{add\-Grid@{add\-Grid}!Board@{Board}}
+\subsubsection[{add\-Grid}]{\setlength{\rightskip}{0pt plus 5cm}void Board\-::add\-Grid (
+\begin{DoxyParamCaption}
+\item[{Q\-Graphics\-Scene $\ast$}]{scene}
+\end{DoxyParamCaption}
+)}}\label{class_board_a799c675452ae1a6d3dd6b2058c88f92a}
+
+
+\hyperlink{class_board_a799c675452ae1a6d3dd6b2058c88f92a}{Board\-::add\-Grid} This will generate the graphical grid and create a G\-U\-I with the visual board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_board_ad3e7c6a4070b1dac5b124a550fa0a6fc}{\index{Board@{Board}!display\-Board@{display\-Board}}
+\index{display\-Board@{display\-Board}!Board@{Board}}
+\subsubsection[{display\-Board}]{\setlength{\rightskip}{0pt plus 5cm}void Board\-::display\-Board (
+\begin{DoxyParamCaption}
+\item[{int}]{player1\-Score, }
+\item[{int}]{player2\-Score}
+\end{DoxyParamCaption}
+)}}\label{class_board_ad3e7c6a4070b1dac5b124a550fa0a6fc}
+
+
+\hyperlink{class_board_ad3e7c6a4070b1dac5b124a550fa0a6fc}{Board\-::display\-Board} Displays the current \hyperlink{class_board}{Board} with both players' scores (the remaining pieces) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player1\-Score} & \\
+\hline
+{\em player2\-Score} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_board_a964d67ddc797487f1a018e4c7cd82075}{\index{Board@{Board}!update\-Grid@{update\-Grid}}
+\index{update\-Grid@{update\-Grid}!Board@{Board}}
+\subsubsection[{update\-Grid}]{\setlength{\rightskip}{0pt plus 5cm}void Board\-::update\-Grid (
+\begin{DoxyParamCaption}
+\item[{Q\-Graphics\-Scene $\ast$}]{scene}
+\end{DoxyParamCaption}
+)}}\label{class_board_a964d67ddc797487f1a018e4c7cd82075}
+
+
+\hyperlink{class_board_a964d67ddc797487f1a018e4c7cd82075}{Board\-::update\-Grid} Updates the grid with the current turn and pieces remaining on the board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_board_a6e32218e7d8adc57f9d414836d135d96}{\index{Board@{Board}!board@{board}}
+\index{board@{board}!Board@{Board}}
+\subsubsection[{board}]{\setlength{\rightskip}{0pt plus 5cm}char Board\-::board\mbox{[}{\bf B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H}\mbox{]}\mbox{[}{\bf B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H}\mbox{]}}}\label{class_board_a6e32218e7d8adc57f9d414836d135d96}
+\hypertarget{class_board_a3b3d4827430812c8849610301dbf91f3}{\index{Board@{Board}!B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H@{B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H}}
+\index{B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H@{B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H}!Board@{Board}}
+\subsubsection[{B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}const int Board\-::\-B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H = 8\hspace{0.3cm}{\ttfamily [static]}}}\label{class_board_a3b3d4827430812c8849610301dbf91f3}
+\hypertarget{class_board_acd3e1340f25b2d2371d8a2862e473b15}{\index{Board@{Board}!tiles@{tiles}}
+\index{tiles@{tiles}!Board@{Board}}
+\subsubsection[{tiles}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sq} Board\-::tiles\mbox{[}8\mbox{]}\mbox{[}8\mbox{]}}}\label{class_board_acd3e1340f25b2d2371d8a2862e473b15}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{board_8h}{board.\-h}\item 
+\hyperlink{board_8cpp}{board.\-cpp}\end{DoxyCompactItemize}

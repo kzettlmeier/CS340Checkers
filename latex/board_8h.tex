@@ -1,0 +1,76 @@
+\hypertarget{board_8h}{\section{board.\-h File Reference}
+\label{board_8h}\index{board.\-h@{board.\-h}}
+}
+{\ttfamily \#include $<$Q\-Graphics\-Scene$>$}\\*
+{\ttfamily \#include $<$Qt\-Gui$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsq}{sq}
+\begin{DoxyCompactList}\small\item\em The color enum
+
+A structure containing the values of a square, which include its x and y position and the color of the square. \end{DoxyCompactList}\item 
+class \hyperlink{class_board}{Board}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{board_8h_a8e24a27ddbc8df73d255819cff590c78}{S\-Q\-\_\-\-S}~40
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structsq}{sq} \hyperlink{board_8h_a07a2313fe921ff279f333a9888a9f197}{sq}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{board_8h_a37dbdc30935031c05304482e1be89d8f}{color} \{ \hyperlink{board_8h_a37dbdc30935031c05304482e1be89d8faf80f9a890089d211842d59625e561f88}{R\-E\-D}, 
+\hyperlink{board_8h_a37dbdc30935031c05304482e1be89d8faf77fb67151d0c18d397069ad8c271ba3}{B\-L\-A\-C\-K}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The board header file
+
+This is the board header file, this is where the board will be stored. This also store the board length, in which if you wanted a bigger board you can do it here. This is also where we have the display board function, which was was used to create the checkers game as a console application.
+
+\begin{DoxyAuthor}{Author}
+Andrew Guillen 
+
+Shane Lopez 
+
+Kendall Zettlmeier 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{board_8h_a8e24a27ddbc8df73d255819cff590c78}{\index{board.\-h@{board.\-h}!S\-Q\-\_\-\-S@{S\-Q\-\_\-\-S}}
+\index{S\-Q\-\_\-\-S@{S\-Q\-\_\-\-S}!board.h@{board.\-h}}
+\subsubsection[{S\-Q\-\_\-\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Q\-\_\-\-S~40}}\label{board_8h_a8e24a27ddbc8df73d255819cff590c78}
+Pre-\/defines the size of the square to about 40 pixels 
+
+\subsection{Typedef Documentation}
+\hypertarget{board_8h_a07a2313fe921ff279f333a9888a9f197}{\index{board.\-h@{board.\-h}!sq@{sq}}
+\index{sq@{sq}!board.h@{board.\-h}}
+\subsubsection[{sq}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf sq} {\bf sq}}}\label{board_8h_a07a2313fe921ff279f333a9888a9f197}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{board_8h_a37dbdc30935031c05304482e1be89d8f}{\index{board.\-h@{board.\-h}!color@{color}}
+\index{color@{color}!board.h@{board.\-h}}
+\subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf color}}}\label{board_8h_a37dbdc30935031c05304482e1be89d8f}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{R\-E\-D@{R\-E\-D}!board.\-h@{board.\-h}}\index{board.\-h@{board.\-h}!R\-E\-D@{R\-E\-D}}\item[{\em 
+\hypertarget{board_8h_a37dbdc30935031c05304482e1be89d8faf80f9a890089d211842d59625e561f88}{R\-E\-D}\label{board_8h_a37dbdc30935031c05304482e1be89d8faf80f9a890089d211842d59625e561f88}
+}]\index{B\-L\-A\-C\-K@{B\-L\-A\-C\-K}!board.\-h@{board.\-h}}\index{board.\-h@{board.\-h}!B\-L\-A\-C\-K@{B\-L\-A\-C\-K}}\item[{\em 
+\hypertarget{board_8h_a37dbdc30935031c05304482e1be89d8faf77fb67151d0c18d397069ad8c271ba3}{B\-L\-A\-C\-K}\label{board_8h_a37dbdc30935031c05304482e1be89d8faf77fb67151d0c18d397069ad8c271ba3}
+}]\end{description}
+\end{Desc}

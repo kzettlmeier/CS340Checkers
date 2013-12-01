@@ -1,0 +1,294 @@
+\hypertarget{class_game}{\section{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+}
+
+
+{\ttfamily \#include $<$game.\-h$>$}
+
+Inheritance diagram for Game\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_game}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game} ()
+\item 
+bool \hyperlink{class_game_a85a222741ee55b73e12cca53487f0540}{make\-A\-Move} (int player, char $\ast$piece\-To\-Move, char $\ast$move\-To)
+\item 
+int \hyperlink{class_game_a708211cd7858e1628cef1b98e2712797}{convert\-Char\-Dimension\-To\-Int} (char second\-Dimension)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_game_a708211cd7858e1628cef1b98e2712797}{Game\-::convert\-Char\-Dimension\-To\-Int} This method converts the second dimension from a character to an integer. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_ab049a593d3f303c4b090f3e25cbf1056}{move\-Regular\-P1\-Up} (int new\-First\-Dimension, int current\-First\-Dimension, int new\-Second\-Dimension, int current\-Second\-Dimension)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_game_ab049a593d3f303c4b090f3e25cbf1056}{Game\-::move\-Regular\-P1\-Up} Moves the regular piece for player 1 up the board. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_aff639012e102ce42f09306bbf580c391}{move\-King\-P1} (int new\-First\-Dimension, int current\-First\-Dimension, int new\-Second\-Dimension, int current\-Second\-Dimension)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_game_aff639012e102ce42f09306bbf580c391}{Game\-::move\-King\-P1} Moves the player 1 King piece. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_aad3a58175a91d8235771707620846429}{move\-Regular\-P2\-Down} (int new\-First\-Dimension, int current\-First\-Dimension, int new\-Second\-Dimension, int current\-Second\-Dimension)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_game_aad3a58175a91d8235771707620846429}{Game\-::move\-Regular\-P2\-Down} A method that moves a player 2's regular piece down the board. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_ae89d9850dd157a1ace783ca8785411f3}{move\-King\-P2} (int new\-First\-Dimension, int current\-First\-Dimension, int new\-Second\-Dimension, int current\-Second\-Dimension)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_game_ae89d9850dd157a1ace783ca8785411f3}{Game\-::move\-King\-P2} Moves the player 2's King piece. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_a9e622f6a5fe4c04a0cf2055b3da1c2f2}{can\-Jump\-Player} (char $\ast$current\-Pos)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_game_a9e622f6a5fe4c04a0cf2055b3da1c2f2}{Game\-::can\-Jump\-Player} A method that checks to see if a player can jump another player. \end{DoxyCompactList}\item 
+string \hyperlink{class_game_af770bb006101a532326310417011b5e6}{jump\-Pos} (char $\ast$current\-Pos)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_game_af770bb006101a532326310417011b5e6}{Game\-::jump\-Pos} Checks if the player can jump another player. \end{DoxyCompactList}\item 
+char \hyperlink{class_game_a6d8b525593305e2a573fc7fc13bca103}{convert\-Int\-To\-Char} (int num)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_game_a6d8b525593305e2a573fc7fc13bca103}{Game\-::convert\-Int\-To\-Char} Convert an integer to a corresponding character on the board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_game_af6803e417a57dcf56debfd2ecdcc9661}{current\-Piece}
+\item 
+int \hyperlink{class_game_af0938fa4b54d37a0c3099397a58d3cd7}{current\-King\-Piece}
+\item 
+int \hyperlink{class_game_a54d8c544103d5721e83e75c0fb42a4a3}{player1\-Score}
+\item 
+int \hyperlink{class_game_a6ceb54d51da7bfd37492c3ebcea60412}{player2\-Score}
+\item 
+bool \hyperlink{class_game_aa7bf3272e009587fca6a67b486e27418}{another\-Jump}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}{\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\subsubsection[{Game}]{\setlength{\rightskip}{0pt plus 5cm}Game\-::\-Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_ad59df6562a58a614fda24622d3715b65}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_a9e622f6a5fe4c04a0cf2055b3da1c2f2}{\index{Game@{Game}!can\-Jump\-Player@{can\-Jump\-Player}}
+\index{can\-Jump\-Player@{can\-Jump\-Player}!Game@{Game}}
+\subsubsection[{can\-Jump\-Player}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\-::can\-Jump\-Player (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{current\-Pos}
+\end{DoxyParamCaption}
+)}}\label{class_game_a9e622f6a5fe4c04a0cf2055b3da1c2f2}
+
+
+\hyperlink{class_game_a9e622f6a5fe4c04a0cf2055b3da1c2f2}{Game\-::can\-Jump\-Player} A method that checks to see if a player can jump another player. 
+
+This method receives a parameter that tells the method what the current position is, which then the application will use to check to see if any of the adjacent pieces are enemy pieces. First the game will determine if the current piece is a King piece or a regular piece. Then, it will scan to see if there is an opponent's piece adjacent to them, meaning that there is a possibility that the player can make a jump. Once the game detects that an opponent piece is next to them, it will check the piece adjacent to the opponent piece and make sure that the piece adjacent to them is empty; bear in mind, that the application will also keep track to see if the jump is legal, that is, the piece can safely jump a player and still be within the board's dimensions. It will run the same tests for each type of piece (the P1 regular, P2 regular, P1 King, and the P2 King), where the King pieces function slightly different than the regular pieces. The King can jump in any direction, so it then has to check every adjacent piece to see if it can jump. Meanwhile, the regular pieces only need to check above them (player 1 regular) or below them (player 2 regular).
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\-Pos} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if there is a player and there can be a jump, otherwise it will return false 
+\end{DoxyReturn}
+\hypertarget{class_game_a708211cd7858e1628cef1b98e2712797}{\index{Game@{Game}!convert\-Char\-Dimension\-To\-Int@{convert\-Char\-Dimension\-To\-Int}}
+\index{convert\-Char\-Dimension\-To\-Int@{convert\-Char\-Dimension\-To\-Int}!Game@{Game}}
+\subsubsection[{convert\-Char\-Dimension\-To\-Int}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-::convert\-Char\-Dimension\-To\-Int (
+\begin{DoxyParamCaption}
+\item[{char}]{second\-Dimension}
+\end{DoxyParamCaption}
+)}}\label{class_game_a708211cd7858e1628cef1b98e2712797}
+
+
+\hyperlink{class_game_a708211cd7858e1628cef1b98e2712797}{Game\-::convert\-Char\-Dimension\-To\-Int} This method converts the second dimension from a character to an integer. 
+
+The method receives the character (the coordinate) of the board, rather the letter corresponding to 1/2 of the coordinates and will convert the value into an integer such that the application can process the information in finding out the move. 
+\begin{DoxyParams}{Parameters}
+{\em second\-Dimension} & a coodinate that corresponds to a move \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A successful conversion in processing the move of a player 
+\end{DoxyReturn}
+\hypertarget{class_game_a6d8b525593305e2a573fc7fc13bca103}{\index{Game@{Game}!convert\-Int\-To\-Char@{convert\-Int\-To\-Char}}
+\index{convert\-Int\-To\-Char@{convert\-Int\-To\-Char}!Game@{Game}}
+\subsubsection[{convert\-Int\-To\-Char}]{\setlength{\rightskip}{0pt plus 5cm}char Game\-::convert\-Int\-To\-Char (
+\begin{DoxyParamCaption}
+\item[{int}]{num}
+\end{DoxyParamCaption}
+)}}\label{class_game_a6d8b525593305e2a573fc7fc13bca103}
+
+
+\hyperlink{class_game_a6d8b525593305e2a573fc7fc13bca103}{Game\-::convert\-Int\-To\-Char} Convert an integer to a corresponding character on the board. 
+
+After the game makes its computations to authenticate a valid move for a given player, the game does the move, then checks to see if a jump can be made (or has been made). Then after it finishes the calculations, it then converts the integer that was generated earlier back to its corresponding character that is part of the move coordinates when making a move. 
+\begin{DoxyParams}{Parameters}
+{\em num} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the coordinate of the board for a move 
+\end{DoxyReturn}
+\hypertarget{class_game_af770bb006101a532326310417011b5e6}{\index{Game@{Game}!jump\-Pos@{jump\-Pos}}
+\index{jump\-Pos@{jump\-Pos}!Game@{Game}}
+\subsubsection[{jump\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}string Game\-::jump\-Pos (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{current\-Pos}
+\end{DoxyParamCaption}
+)}}\label{class_game_af770bb006101a532326310417011b5e6}
+
+
+\hyperlink{class_game_af770bb006101a532326310417011b5e6}{Game\-::jump\-Pos} Checks if the player can jump another player. 
+
+This method is more or less a decider that decides whether or not a player's piece can be jumped. Similar to the can\-Jump\-Player method it largely does the same checks to see if the jump that can be made is legal, and if it's legal, then the piece will jump, otherwise, it will not jump anc continue the game. This is largely used to see if another piece can be jumped after the initial jump was made. 
+\begin{DoxyParams}{Parameters}
+{\em current\-Pos} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new position of the current piece since it jumped, and it must relay the information back to the board. 
+\end{DoxyReturn}
+\hypertarget{class_game_a85a222741ee55b73e12cca53487f0540}{\index{Game@{Game}!make\-A\-Move@{make\-A\-Move}}
+\index{make\-A\-Move@{make\-A\-Move}!Game@{Game}}
+\subsubsection[{make\-A\-Move}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\-::make\-A\-Move (
+\begin{DoxyParamCaption}
+\item[{int}]{player, }
+\item[{char $\ast$}]{piece\-To\-Move, }
+\item[{char $\ast$}]{move\-To}
+\end{DoxyParamCaption}
+)}}\label{class_game_a85a222741ee55b73e12cca53487f0540}
+\hypertarget{class_game_aff639012e102ce42f09306bbf580c391}{\index{Game@{Game}!move\-King\-P1@{move\-King\-P1}}
+\index{move\-King\-P1@{move\-King\-P1}!Game@{Game}}
+\subsubsection[{move\-King\-P1}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\-::move\-King\-P1 (
+\begin{DoxyParamCaption}
+\item[{int}]{new\-First\-Dimension, }
+\item[{int}]{current\-First\-Dimension, }
+\item[{int}]{new\-Second\-Dimension, }
+\item[{int}]{current\-Second\-Dimension}
+\end{DoxyParamCaption}
+)}}\label{class_game_aff639012e102ce42f09306bbf580c391}
+
+
+\hyperlink{class_game_aff639012e102ce42f09306bbf580c391}{Game\-::move\-King\-P1} Moves the player 1 King piece. 
+
+This method is called upon the move\-A\-Move method. What happens is that the game runs a series of error checks (is it inbounds, is the move legal, is the move not filled) and it runs a test to see if when making a move, a jump(s) is possible. If the move is a blank spot, then the method returns the move itself. If the game detects that a jump is possible, it will call up the method to make a jump and force the player to make the jump (as dictated by our game's logic). After the jump is made, then the game will test to see if another jump is possible, which if there results that another jump can be made then the game will force the player to jump once more. We felt that in our design, we had to make the game jump the player by force, or else a more difficult algorithm had to be implemented, which easily increases the difficulty of implementation exponentially.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\-First\-Dimension} & \\
+\hline
+{\em current\-First\-Dimension} & \\
+\hline
+{\em new\-Second\-Dimension} & \\
+\hline
+{\em current\-Second\-Dimension} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the valid move and moves the piece. 
+\end{DoxyReturn}
+\hypertarget{class_game_ae89d9850dd157a1ace783ca8785411f3}{\index{Game@{Game}!move\-King\-P2@{move\-King\-P2}}
+\index{move\-King\-P2@{move\-King\-P2}!Game@{Game}}
+\subsubsection[{move\-King\-P2}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\-::move\-King\-P2 (
+\begin{DoxyParamCaption}
+\item[{int}]{new\-First\-Dimension, }
+\item[{int}]{current\-First\-Dimension, }
+\item[{int}]{new\-Second\-Dimension, }
+\item[{int}]{current\-Second\-Dimension}
+\end{DoxyParamCaption}
+)}}\label{class_game_ae89d9850dd157a1ace783ca8785411f3}
+
+
+\hyperlink{class_game_ae89d9850dd157a1ace783ca8785411f3}{Game\-::move\-King\-P2} Moves the player 2's King piece. 
+
+Please see the detailed information about the player move\-King\-P1 method, as their functions are practically the same. The main difference being in that our game Logic dictates that player 1 pieces move \char`\"{}up\char`\"{} generally and the player 1 King initially moves down; whereas, the player 2 pieces move \char`\"{}down\char`\"{} the board and the player 2 King pieces move up.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\-First\-Dimension} & \\
+\hline
+{\em current\-First\-Dimension} & \\
+\hline
+{\em new\-Second\-Dimension} & \\
+\hline
+{\em current\-Second\-Dimension} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move attempt passes the error checks and is valid. 
+\end{DoxyReturn}
+\hypertarget{class_game_ab049a593d3f303c4b090f3e25cbf1056}{\index{Game@{Game}!move\-Regular\-P1\-Up@{move\-Regular\-P1\-Up}}
+\index{move\-Regular\-P1\-Up@{move\-Regular\-P1\-Up}!Game@{Game}}
+\subsubsection[{move\-Regular\-P1\-Up}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\-::move\-Regular\-P1\-Up (
+\begin{DoxyParamCaption}
+\item[{int}]{new\-First\-Dimension, }
+\item[{int}]{current\-First\-Dimension, }
+\item[{int}]{new\-Second\-Dimension, }
+\item[{int}]{current\-Second\-Dimension}
+\end{DoxyParamCaption}
+)}}\label{class_game_ab049a593d3f303c4b090f3e25cbf1056}
+
+
+\hyperlink{class_game_ab049a593d3f303c4b090f3e25cbf1056}{Game\-::move\-Regular\-P1\-Up} Moves the regular piece for player 1 up the board. 
+
+This method works nearly identical to the move\-Regular\-P2\-Down method, but will instead move the pieces \char`\"{}up\char`\"{} if they are valid. We mean that a piece moves up (for P1) or down (for P2) because it is what can be seen from the screen, where the player 1 pieces move towards the top of the screen and the player 2 pieces move down the screen. Similarly to the other move methods, this method will check to see if the move is within the dimensions of the board (is the destination spot a legal spot)and will check to see if the spot isn't already occupied by a friendly piece. It will also check to see if the piece can make a jump and it will also check to see if the piece can make any subsequent jumps after the initial jump, where the game will force the player to make the jump.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\-First\-Dimension} & \\
+\hline
+{\em current\-First\-Dimension} & \\
+\hline
+{\em new\-Second\-Dimension} & \\
+\hline
+{\em current\-Second\-Dimension} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is valid, otherwise it will be false and an error appears 
+\end{DoxyReturn}
+\hypertarget{class_game_aad3a58175a91d8235771707620846429}{\index{Game@{Game}!move\-Regular\-P2\-Down@{move\-Regular\-P2\-Down}}
+\index{move\-Regular\-P2\-Down@{move\-Regular\-P2\-Down}!Game@{Game}}
+\subsubsection[{move\-Regular\-P2\-Down}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\-::move\-Regular\-P2\-Down (
+\begin{DoxyParamCaption}
+\item[{int}]{new\-First\-Dimension, }
+\item[{int}]{current\-First\-Dimension, }
+\item[{int}]{new\-Second\-Dimension, }
+\item[{int}]{current\-Second\-Dimension}
+\end{DoxyParamCaption}
+)}}\label{class_game_aad3a58175a91d8235771707620846429}
+
+
+\hyperlink{class_game_aad3a58175a91d8235771707620846429}{Game\-::move\-Regular\-P2\-Down} A method that moves a player 2's regular piece down the board. 
+
+Similar to the move\-King\-P1 method, this is also called by the make\-A\-Move method that verifies and validates the move with the given parameters from the make\-A\-Move method. It checks to see if the move is valid (the destination spot is vacant, the move is within bounds of the board and is within bounds of a single empty move space). It also checks to see if a jump can be made, where if it can make a move, then the method calls forth another method to handle the jump; also, it keeps track to see if it can jump again after it had previously jumped a piece.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\-First\-Dimension} & \\
+\hline
+{\em current\-First\-Dimension} & \\
+\hline
+{\em new\-Second\-Dimension} & \\
+\hline
+{\em current\-Second\-Dimension} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if a vaild move for the player2 regular piece, otherwise it will return false 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_game_aa7bf3272e009587fca6a67b486e27418}{\index{Game@{Game}!another\-Jump@{another\-Jump}}
+\index{another\-Jump@{another\-Jump}!Game@{Game}}
+\subsubsection[{another\-Jump}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\-::another\-Jump}}\label{class_game_aa7bf3272e009587fca6a67b486e27418}
+\hypertarget{class_game_af0938fa4b54d37a0c3099397a58d3cd7}{\index{Game@{Game}!current\-King\-Piece@{current\-King\-Piece}}
+\index{current\-King\-Piece@{current\-King\-Piece}!Game@{Game}}
+\subsubsection[{current\-King\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-::current\-King\-Piece}}\label{class_game_af0938fa4b54d37a0c3099397a58d3cd7}
+\hypertarget{class_game_af6803e417a57dcf56debfd2ecdcc9661}{\index{Game@{Game}!current\-Piece@{current\-Piece}}
+\index{current\-Piece@{current\-Piece}!Game@{Game}}
+\subsubsection[{current\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-::current\-Piece}}\label{class_game_af6803e417a57dcf56debfd2ecdcc9661}
+\hypertarget{class_game_a54d8c544103d5721e83e75c0fb42a4a3}{\index{Game@{Game}!player1\-Score@{player1\-Score}}
+\index{player1\-Score@{player1\-Score}!Game@{Game}}
+\subsubsection[{player1\-Score}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-::player1\-Score}}\label{class_game_a54d8c544103d5721e83e75c0fb42a4a3}
+\hypertarget{class_game_a6ceb54d51da7bfd37492c3ebcea60412}{\index{Game@{Game}!player2\-Score@{player2\-Score}}
+\index{player2\-Score@{player2\-Score}!Game@{Game}}
+\subsubsection[{player2\-Score}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-::player2\-Score}}\label{class_game_a6ceb54d51da7bfd37492c3ebcea60412}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{game_8h}{game.\-h}\item 
+\hyperlink{game_8cpp}{game.\-cpp}\end{DoxyCompactItemize}
