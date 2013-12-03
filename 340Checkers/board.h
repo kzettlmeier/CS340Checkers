@@ -32,6 +32,7 @@
 #include <QGraphicsScene>
 #include <QtGui>
 #include <unistd.h>
+#include <QGraphicsView>
 
 /**
  * @brief The color enum

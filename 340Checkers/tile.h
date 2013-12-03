@@ -20,6 +20,7 @@
 #ifndef TILE_H
 #define TILE_H
 #include <QtGui>
+#include <QGraphicsRectItem>
 #define S 40
 
 /**
