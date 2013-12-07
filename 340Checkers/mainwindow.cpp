@@ -24,6 +24,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <iostream>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -133,6 +134,7 @@ void MainWindow::on_SendButton_clicked()
     //Player 2's turn
     if (playerTurn == 2)
     {
+        usleep((useconds_t)100000);// pause a moment
         //Check all the moves for the player
         computer.checkAllComputerMoves();
 
@@ -156,6 +158,7 @@ void MainWindow::on_SendButton_clicked()
 
         //Have the computer move
         //Send data to board in order to move
+        usleep((useconds_t)100000);// pause a moment
         bool successfulPCTurn = computer.makeAMove(playerTurn, sepPos[0], sepPos[1]);
         computer.displayBoard(computer.player1Score, computer.player2Score);
         computer.updateGrid(ui->gv->scene());
@@ -174,6 +177,7 @@ void MainWindow::on_SendButton_clicked()
             computer.anotherJump = computer.canJumpPlayer(sepPos[1]);
             while(computer.anotherJump == true)
             {
+                usleep((useconds_t)100000);// pause a moment
                 string newPos = computer.jumpPos(sepPos[1]);
                 char *position = new char[2];
                 strcpy(position, newPos.c_str());
@@ -202,6 +206,11 @@ void MainWindow::on_SendButton_clicked()
         computer.removeData();
     }
     computer.updateGrid(ui->gv->scene());
+    char b [8];
+    snprintf(b, sizeof(b), "P1: %d", computer.player1Score);
+    ui->p1score->setText(b);
+    snprintf(b, sizeof(b), "P2: %d", computer.player2Score);
+    ui->p2score->setText(b);
 }
 
 /**
@@ -219,6 +228,8 @@ void MainWindow::on_StartButton_clicked()
     //Set the player turn to player 1
     game.updateGrid(ui->gv->scene());
     playerTurn = 1;
+    ui->p1score->setText("P1: 12");
+    ui->p2score->setText("P2: 12");
 }
 
 /**

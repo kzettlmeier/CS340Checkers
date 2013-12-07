@@ -136,10 +136,12 @@ void Board::updateGrid(QGraphicsScene *scene)
     QBrush blackBrush(Qt::black);
     QBrush cyan(Qt::cyan);
     QBrush green(Qt::green);
+    QBrush kx(Qt::blue);
+    QBrush ko(Qt::black);
     QPen blackPen(QColor(255, 255, 255));
     int x,y,xp,yp;
 
-    usleep((useconds_t)150000);
+    usleep((useconds_t)200000);
 
     for(int i = 0; i < 8; i++) {
         for(int j = 0; j < 8; j++) {
@@ -159,6 +161,16 @@ void Board::updateGrid(QGraphicsScene *scene)
             }
             else if(board[i][j] == 'o') {
                 scene->addRect(xp,yp,SQ_S/2,SQ_S/2,blackPen,green);
+                //cout<<"o at ("<<i<<", "<<j<<")\n"<<endl;
+            }
+            else if(board[i][j] == 'X') {
+                scene->addRect(xp,yp,SQ_S/2,SQ_S/2,blackPen,cyan);
+                scene->addRect(xp+SQ_S/8,yp+SQ_S/8,SQ_S/4,SQ_S/4,blackPen,kx);
+                //cout<<"o at ("<<i<<", "<<j<<")\n"<<endl;
+            }
+            else if(board[i][j] == 'O') {
+                scene->addRect(xp,yp,SQ_S/2,SQ_S/2,blackPen,green);
+                scene->addRect(xp+SQ_S/8,yp+SQ_S/8,SQ_S/4,SQ_S/4,blackPen,ko);
                 //cout<<"o at ("<<i<<", "<<j<<")\n"<<endl;
             }
 
