@@ -21,10 +21,10 @@
 using namespace std;
 
 /**
- * @brief main
- * @param argc
- * @param argv
- * @return
+ * @brief main The main function of the application
+ * @param argc The argument counter (used initially for the command line variation of the checkers game)
+ * @param argv The argument vector pointing to the command line arguments themselves
+ * @return The UI window opened with the application running
  */
 int main(int argc, char *argv[])
 {

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>CS 340 Checkers: tile.h Source File</title>
+<title>CS 340 Checkers: 340Checkers/tile.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,9 +31,9 @@
   <td id="projectlogo"><img alt="Logo" src="Checkers Pic.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CS 340 Checkers
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">Ver. 1.0</span>
    </div>
-   <div id="projectbrief">A Checkers game with an integrated A.I.</div>
+   <div id="projectbrief">Checkers game with integrated A.I.</div>
   </td>
  </tr>
  </tbody>
@@ -113,25 +113,26 @@ $(document).ready(function(){initNavTree('tile_8h_source.html','');});
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef TILE_H</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TILE_H</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;QtGui&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="tile_8h.html#af933676109efed7ab34cea71d748a517">   23</a></span>&#160;<span class="preprocessor">#define S 40</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classtile.html">   38</a></span>&#160;<span class="keyword">class </span><a class="code" href="classtile.html">tile</a> : <span class="keyword">public</span> QGraphicsRectItem</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> row,col,<a class="code" href="board_8h.html#a37dbdc30935031c05304482e1be89d8f">color</a>,posx,posy;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classtile.html">tile</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> c);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> mousePressEvent(QMouseEvent *event);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif // TILE_H</span></div>
-<div class="ttc" id="board_8h_html_a37dbdc30935031c05304482e1be89d8f"><div class="ttname"><a href="board_8h.html#a37dbdc30935031c05304482e1be89d8f">color</a></div><div class="ttdeci">color</div><div class="ttdef"><b>Definition:</b> board.h:45</div></div>
-<div class="ttc" id="classtile_html"><div class="ttname"><a href="classtile.html">tile</a></div><div class="ttdef"><b>Definition:</b> tile.h:38</div></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;QGraphicsRectItem&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="tile_8h.html#af933676109efed7ab34cea71d748a517">   24</a></span>&#160;<span class="preprocessor">#define S 40</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classtile.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="classtile.html">tile</a> : <span class="keyword">public</span> QGraphicsRectItem</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> row,col,<a class="code" href="board_8h.html#a37dbdc30935031c05304482e1be89d8f">color</a>,posx,posy;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classtile.html">tile</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> c);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> mousePressEvent(QMouseEvent *event);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif // TILE_H</span></div>
+<div class="ttc" id="board_8h_html_a37dbdc30935031c05304482e1be89d8f"><div class="ttname"><a href="board_8h.html#a37dbdc30935031c05304482e1be89d8f">color</a></div><div class="ttdeci">color</div><div class="ttdef"><b>Definition:</b> <a href="board_8h_source.html#l00048">board.h:48</a></div></div>
+<div class="ttc" id="classtile_html"><div class="ttname"><a href="classtile.html">tile</a></div><div class="ttdef"><b>Definition:</b> <a href="tile_8h_source.html#l00039">tile.h:39</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="tile_8h.html">tile.h</a></li>
-    <li class="footer">Generated on Sat Nov 30 2013 17:17:40 for CS 340 Checkers by
+    <li class="navelem"><a class="el" href="dir_3b8e419d298cde21fe3fef336bd56aa8.html">340Checkers</a></li><li class="navelem"><a class="el" href="tile_8h.html">tile.h</a></li>
+    <li class="footer">Generated on Fri Dec 6 2013 20:39:02 for CS 340 Checkers by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

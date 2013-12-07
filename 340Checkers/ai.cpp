@@ -2,11 +2,16 @@
  * The ai.cpp file contains all of the information that deals with the A.I. player.
  *
  * It references the classes and objects that are used and defined in the game.h file
+ * This contains all of the logic used by the AI, which directly inherits the classes from
+ * the game and board.
  *
  *  \author Andrew Guillen
  *  \author Shane Lopez
  *  \author Kendall Zettlmeier
  *  \version 1.0
+ *
+ *  \bug Occasional rare bug that the game would say that it's not a player's turn, yet text
+ *       version of the board would say that the turn has updated.
  *
  */
 
@@ -34,6 +39,17 @@ AI::AI()
 /**
  * @brief AI::checkAllComputerMoves
  *      This is a method that checks all possible moves for the computer.
+ *
+ *  The way it checks for all computer moves is similar to checking for a probable player move
+ *  It gets all of the positions for every computer piece on the board, which it keeps a separate
+ *  counter for the available new moves and the number of jumps it may have available.
+ *
+ *  It computes it current locations in relation to the other player's pieces on the board, while
+ *  keeping track of what enemy pieces it can jump. If it is able to make a jump for a given piece,
+ *  then it would give priority for that selected piece and make the jump immediately; otherwise, it would
+ *  repeat its search for moves for all pieces that can make a legal move. This also uses the same logic
+ *  for when moving a King piece, the only logical difference being that it has the ability to move in nearly
+ *  any direction.
  */
 void AI::checkAllComputerMoves()
 {
@@ -373,7 +389,7 @@ void AI::checkAllComputerMoves()
 /**
  * @brief AI::decider
  *      This is what allows the AI to decide which move it should take.
- * @return
+ * @return returns the best move the AI will do
  */
 string AI::decider()
 {
@@ -441,8 +457,8 @@ string AI::decider()
 /**
  * @brief AI::convertIntToChar
  *      This converts an integer to the corresponding character on the board.
- * @param num
- * @return
+ * @param num A number that corresponds to part of the coordinate of a move.
+ * @return returns a character converted from an integer
  */
 char AI::convertIntToChar(int num)
 {

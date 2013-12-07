@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>CS 340 Checkers: ai.cpp File Reference</title>
+<title>CS 340 Checkers: 340Checkers/ai.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,9 +31,9 @@
   <td id="projectlogo"><img alt="Logo" src="Checkers Pic.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CS 340 Checkers
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">Ver. 1.0</span>
    </div>
-   <div id="projectbrief">A Checkers game with an integrated A.I.</div>
+   <div id="projectbrief">Checkers game with integrated A.I.</div>
   </td>
  </tr>
  </tbody>
@@ -117,7 +117,9 @@ $(document).ready(function(){initNavTree('ai_8cpp.html','');});
 <code>#include &lt;sstream&gt;</code><br/>
 <code>#include &lt;time.h&gt;</code><br/>
 <code>#include &lt;stdlib.h&gt;</code><br/>
-</div><table class="memberdecls">
+</div>
+<p><a href="ai_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacestd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html">std</a></td></tr>
@@ -125,20 +127,23 @@ Namespaces</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="ai_8cpp.html">ai.cpp</a> file contains all of the information that deals with the A.I. player.</p>
-<p>It references the classes and objects that are used and defined in the <a class="el" href="game_8h.html">game.h</a> file</p>
+<p>It references the classes and objects that are used and defined in the <a class="el" href="game_8h.html">game.h</a> file This contains all of the logic used by the <a class="el" href="class_a_i.html" title="The AI class. ">AI</a>, which directly inherits the classes from the game and board.</p>
 <dl class="section author"><dt>Author</dt><dd>Andrew Guillen </dd>
 <dd>
 Shane Lopez </dd>
 <dd>
 Kendall Zettlmeier </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0</dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000001">Bug:</a></b></dt><dd>Occasional rare bug that the game would say that it's not a player's turn, yet text version of the board would say that the turn has updated.</dd></dl>
+
+<p>Definition in file <a class="el" href="ai_8cpp_source.html">ai.cpp</a>.</p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="ai_8cpp.html">ai.cpp</a></li>
-    <li class="footer">Generated on Sat Nov 30 2013 17:17:40 for CS 340 Checkers by
+    <li class="navelem"><a class="el" href="dir_3b8e419d298cde21fe3fef336bd56aa8.html">340Checkers</a></li><li class="navelem"><a class="el" href="ai_8cpp.html">ai.cpp</a></li>
+    <li class="footer">Generated on Fri Dec 6 2013 20:39:02 for CS 340 Checkers by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

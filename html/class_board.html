@@ -31,9 +31,9 @@
   <td id="projectlogo"><img alt="Logo" src="Checkers Pic.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CS 340 Checkers
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">Ver. 1.0</span>
    </div>
-   <div id="projectbrief">A Checkers game with an integrated A.I.</div>
+   <div id="projectbrief">Checkers game with integrated A.I.</div>
   </td>
  </tr>
  </tbody>
@@ -156,7 +156,10 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a3b3d4827430812c8849610301dbf91f3"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a3b3d4827430812c8849610301dbf91f3">BOARD_LENGTH</a> = 8</td></tr>
 <tr class="separator:a3b3d4827430812c8849610301dbf91f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p>Definition at line <a class="el" href="board_8h_source.html#l00067">67</a> of file <a class="el" href="board_8h_source.html">board.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a9ee491d4fea680cf69b033374a9fdfcb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -171,6 +174,8 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="class_board.html#a9ee491d4fea680cf69b033374a9fdfcb" title="Board::Board A Board constructor that initializes the board. ">Board::Board</a> A <a class="el" href="class_board.html">Board</a> constructor that initializes the board. </p>
+
+<p>Definition at line <a class="el" href="board_8cpp_source.html#l00033">33</a> of file <a class="el" href="board_8cpp_source.html">board.cpp</a>.</p>
 
 </div>
 </div>
@@ -196,6 +201,8 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="board_8cpp_source.html#l00108">108</a> of file <a class="el" href="board_8cpp_source.html">board.cpp</a>.</p>
 
 </div>
 </div>
@@ -226,11 +233,13 @@ Static Public Attributes</h2></td></tr>
 <p><a class="el" href="class_board.html#ad3e7c6a4070b1dac5b124a550fa0a6fc" title="Board::displayBoard Displays the current Board with both players&#39; scores (the remaining pieces) ...">Board::displayBoard</a> Displays the current <a class="el" href="class_board.html">Board</a> with both players' scores (the remaining pieces) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">player1Score</td><td></td></tr>
-    <tr><td class="paramname">player2Score</td><td></td></tr>
+    <tr><td class="paramname">player1Score</td><td>The number of pieces left of player 1 </td></tr>
+    <tr><td class="paramname">player2Score</td><td>The remaining pieces for player 2 </td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="board_8cpp_source.html#l00078">78</a> of file <a class="el" href="board_8cpp_source.html">board.cpp</a>.</p>
 
 </div>
 </div>
@@ -249,12 +258,15 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="class_board.html#a964d67ddc797487f1a018e4c7cd82075" title="Board::updateGrid Updates the grid with the current turn and pieces remaining on the board...">Board::updateGrid</a> Updates the grid with the current turn and pieces remaining on the board. </p>
+<p>The new things added onto this file are the different colors that represent the different pieces in the game. Also, the grid's coordinates that are used to make a player move are now visible on the board, making it easier to find locate a piece on the board. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">scene</td><td></td></tr>
+    <tr><td class="paramname">scene</td><td>A QGraphicsScene pointer that's used represent objects on the UI. </td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="board_8cpp_source.html#l00140">140</a> of file <a class="el" href="board_8cpp_source.html">board.cpp</a>.</p>
 
 </div>
 </div>
@@ -268,6 +280,8 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="board_8h_source.html#l00073">73</a> of file <a class="el" href="board_8h_source.html">board.h</a>.</p>
 
 </div>
 </div>
@@ -289,6 +303,8 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="board_8h_source.html#l00072">72</a> of file <a class="el" href="board_8h_source.html">board.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="acd3e1340f25b2d2371d8a2862e473b15"></a>
@@ -301,11 +317,13 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="board_8h_source.html#l00071">71</a> of file <a class="el" href="board_8h_source.html">board.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="board_8h_source.html">board.h</a></li>
-<li><a class="el" href="board_8cpp.html">board.cpp</a></li>
+<li>340Checkers/<a class="el" href="board_8h_source.html">board.h</a></li>
+<li>340Checkers/<a class="el" href="board_8cpp_source.html">board.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -313,7 +331,7 @@ Static Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_board.html">Board</a></li>
-    <li class="footer">Generated on Sat Nov 30 2013 17:17:40 for CS 340 Checkers by
+    <li class="footer">Generated on Fri Dec 6 2013 20:39:02 for CS 340 Checkers by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

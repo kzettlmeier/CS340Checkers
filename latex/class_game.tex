@@ -50,6 +50,13 @@ bool \hyperlink{class_game_aa7bf3272e009587fca6a67b486e27418}{another\-Jump}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+
+
+Definition at line 99 of file game.\-h.
+
+
+
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}{\index{Game@{Game}!Game@{Game}}
 \index{Game@{Game}!Game@{Game}}
@@ -58,6 +65,10 @@ bool \hyperlink{class_game_aa7bf3272e009587fca6a67b486e27418}{another\-Jump}
 {}
 \end{DoxyParamCaption}
 )}}\label{class_game_ad59df6562a58a614fda24622d3715b65}
+
+
+Definition at line 44 of file game.\-cpp.
+
 
 
 \subsection{Member Function Documentation}
@@ -76,12 +87,16 @@ This method receives a parameter that tells the method what the current position
 
 
 \begin{DoxyParams}{Parameters}
-{\em current\-Pos} & \\
+{\em current\-Pos} & The current position of a piece, determined by its coordinates \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 true if there is a player and there can be a jump, otherwise it will return false 
 \end{DoxyReturn}
+
+
+Definition at line 775 of file game.\-cpp.
+
 \hypertarget{class_game_a708211cd7858e1628cef1b98e2712797}{\index{Game@{Game}!convert\-Char\-Dimension\-To\-Int@{convert\-Char\-Dimension\-To\-Int}}
 \index{convert\-Char\-Dimension\-To\-Int@{convert\-Char\-Dimension\-To\-Int}!Game@{Game}}
 \subsubsection[{convert\-Char\-Dimension\-To\-Int}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-::convert\-Char\-Dimension\-To\-Int (
@@ -101,6 +116,10 @@ The method receives the character (the coordinate) of the board, rather the lett
 \begin{DoxyReturn}{Returns}
 A successful conversion in processing the move of a player 
 \end{DoxyReturn}
+
+
+Definition at line 713 of file game.\-cpp.
+
 \hypertarget{class_game_a6d8b525593305e2a573fc7fc13bca103}{\index{Game@{Game}!convert\-Int\-To\-Char@{convert\-Int\-To\-Char}}
 \index{convert\-Int\-To\-Char@{convert\-Int\-To\-Char}!Game@{Game}}
 \subsubsection[{convert\-Int\-To\-Char}]{\setlength{\rightskip}{0pt plus 5cm}char Game\-::convert\-Int\-To\-Char (
@@ -114,12 +133,16 @@ A successful conversion in processing the move of a player
 
 After the game makes its computations to authenticate a valid move for a given player, the game does the move, then checks to see if a jump can be made (or has been made). Then after it finishes the calculations, it then converts the integer that was generated earlier back to its corresponding character that is part of the move coordinates when making a move. 
 \begin{DoxyParams}{Parameters}
-{\em num} & \\
+{\em num} & The number corresponding to a coordinate of a game piece \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 the coordinate of the board for a move 
 \end{DoxyReturn}
+
+
+Definition at line 1380 of file game.\-cpp.
+
 \hypertarget{class_game_af770bb006101a532326310417011b5e6}{\index{Game@{Game}!jump\-Pos@{jump\-Pos}}
 \index{jump\-Pos@{jump\-Pos}!Game@{Game}}
 \subsubsection[{jump\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}string Game\-::jump\-Pos (
@@ -133,12 +156,16 @@ the coordinate of the board for a move
 
 This method is more or less a decider that decides whether or not a player's piece can be jumped. Similar to the can\-Jump\-Player method it largely does the same checks to see if the jump that can be made is legal, and if it's legal, then the piece will jump, otherwise, it will not jump anc continue the game. This is largely used to see if another piece can be jumped after the initial jump was made. 
 \begin{DoxyParams}{Parameters}
-{\em current\-Pos} & \\
+{\em current\-Pos} & The current position of a gamepiece \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 the new position of the current piece since it jumped, and it must relay the information back to the board. 
 \end{DoxyReturn}
+
+
+Definition at line 1054 of file game.\-cpp.
+
 \hypertarget{class_game_a85a222741ee55b73e12cca53487f0540}{\index{Game@{Game}!make\-A\-Move@{make\-A\-Move}}
 \index{make\-A\-Move@{make\-A\-Move}!Game@{Game}}
 \subsubsection[{make\-A\-Move}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\-::make\-A\-Move (
@@ -148,6 +175,10 @@ the new position of the current piece since it jumped, and it must relay the inf
 \item[{char $\ast$}]{move\-To}
 \end{DoxyParamCaption}
 )}}\label{class_game_a85a222741ee55b73e12cca53487f0540}
+
+
+Definition at line 74 of file game.\-cpp.
+
 \hypertarget{class_game_aff639012e102ce42f09306bbf580c391}{\index{Game@{Game}!move\-King\-P1@{move\-King\-P1}}
 \index{move\-King\-P1@{move\-King\-P1}!Game@{Game}}
 \subsubsection[{move\-King\-P1}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\-::move\-King\-P1 (
@@ -166,18 +197,22 @@ This method is called upon the move\-A\-Move method. What happens is that the ga
 
 
 \begin{DoxyParams}{Parameters}
-{\em new\-First\-Dimension} & \\
+{\em new\-First\-Dimension} & The new dimension of the piece after it moved \\
 \hline
-{\em current\-First\-Dimension} & \\
+{\em current\-First\-Dimension} & The old dimension of the piece \\
 \hline
-{\em new\-Second\-Dimension} & \\
+{\em new\-Second\-Dimension} & The new dimension of the piece after it moved \\
 \hline
-{\em current\-Second\-Dimension} & \\
+{\em current\-Second\-Dimension} & The old dimension of the piece \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 returns the valid move and moves the piece. 
 \end{DoxyReturn}
+
+
+Definition at line 186 of file game.\-cpp.
+
 \hypertarget{class_game_ae89d9850dd157a1ace783ca8785411f3}{\index{Game@{Game}!move\-King\-P2@{move\-King\-P2}}
 \index{move\-King\-P2@{move\-King\-P2}!Game@{Game}}
 \subsubsection[{move\-King\-P2}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\-::move\-King\-P2 (
@@ -206,8 +241,12 @@ Please see the detailed information about the player move\-King\-P1 method, as t
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true if the move attempt passes the error checks and is valid. 
+true if the move attempt passes the error checks and is valid; otherwise it returns false 
 \end{DoxyReturn}
+
+
+Definition at line 451 of file game.\-cpp.
+
 \hypertarget{class_game_ab049a593d3f303c4b090f3e25cbf1056}{\index{Game@{Game}!move\-Regular\-P1\-Up@{move\-Regular\-P1\-Up}}
 \index{move\-Regular\-P1\-Up@{move\-Regular\-P1\-Up}!Game@{Game}}
 \subsubsection[{move\-Regular\-P1\-Up}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\-::move\-Regular\-P1\-Up (
@@ -238,6 +277,10 @@ This method works nearly identical to the move\-Regular\-P2\-Down method, but wi
 \begin{DoxyReturn}{Returns}
 true if the move is valid, otherwise it will be false and an error appears 
 \end{DoxyReturn}
+
+
+Definition at line 595 of file game.\-cpp.
+
 \hypertarget{class_game_aad3a58175a91d8235771707620846429}{\index{Game@{Game}!move\-Regular\-P2\-Down@{move\-Regular\-P2\-Down}}
 \index{move\-Regular\-P2\-Down@{move\-Regular\-P2\-Down}!Game@{Game}}
 \subsubsection[{move\-Regular\-P2\-Down}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\-::move\-Regular\-P2\-Down (
@@ -270,25 +313,49 @@ true if a vaild move for the player2 regular piece, otherwise it will return fal
 \end{DoxyReturn}
 
 
+Definition at line 328 of file game.\-cpp.
+
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_game_aa7bf3272e009587fca6a67b486e27418}{\index{Game@{Game}!another\-Jump@{another\-Jump}}
 \index{another\-Jump@{another\-Jump}!Game@{Game}}
 \subsubsection[{another\-Jump}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\-::another\-Jump}}\label{class_game_aa7bf3272e009587fca6a67b486e27418}
+
+
+Definition at line 106 of file game.\-h.
+
 \hypertarget{class_game_af0938fa4b54d37a0c3099397a58d3cd7}{\index{Game@{Game}!current\-King\-Piece@{current\-King\-Piece}}
 \index{current\-King\-Piece@{current\-King\-Piece}!Game@{Game}}
 \subsubsection[{current\-King\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-::current\-King\-Piece}}\label{class_game_af0938fa4b54d37a0c3099397a58d3cd7}
+
+
+Definition at line 103 of file game.\-h.
+
 \hypertarget{class_game_af6803e417a57dcf56debfd2ecdcc9661}{\index{Game@{Game}!current\-Piece@{current\-Piece}}
 \index{current\-Piece@{current\-Piece}!Game@{Game}}
 \subsubsection[{current\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-::current\-Piece}}\label{class_game_af6803e417a57dcf56debfd2ecdcc9661}
+
+
+Definition at line 102 of file game.\-h.
+
 \hypertarget{class_game_a54d8c544103d5721e83e75c0fb42a4a3}{\index{Game@{Game}!player1\-Score@{player1\-Score}}
 \index{player1\-Score@{player1\-Score}!Game@{Game}}
 \subsubsection[{player1\-Score}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-::player1\-Score}}\label{class_game_a54d8c544103d5721e83e75c0fb42a4a3}
+
+
+Definition at line 104 of file game.\-h.
+
 \hypertarget{class_game_a6ceb54d51da7bfd37492c3ebcea60412}{\index{Game@{Game}!player2\-Score@{player2\-Score}}
 \index{player2\-Score@{player2\-Score}!Game@{Game}}
 \subsubsection[{player2\-Score}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-::player2\-Score}}\label{class_game_a6ceb54d51da7bfd37492c3ebcea60412}
 
 
+Definition at line 105 of file game.\-h.
+
+
+
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{game_8h}{game.\-h}\item 
-\hyperlink{game_8cpp}{game.\-cpp}\end{DoxyCompactItemize}
+340\-Checkers/\hyperlink{game_8h}{game.\-h}\item 
+340\-Checkers/\hyperlink{game_8cpp}{game.\-cpp}\end{DoxyCompactItemize}

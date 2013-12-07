@@ -13,6 +13,8 @@
  *  \author Kendall Zettlmeier
  *  \version 1.0
  *
+ *  \bug No major bugs found.
+ *
  *  \def BOARD_H
  *  Creates the board
  *  \def SQ_S

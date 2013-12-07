@@ -64,6 +64,9 @@ MainWindow::~MainWindow()
  *  which would run and see if the move is valid or not. If a move can be made,
  *  then the game will do the move, and update the board with the new move; otherwise,
  *  the game will report an error message to the current player and tell them what is wrong.
+ *
+ *  Now what's included with the updates are: refined UI, cleaner graphics, coordinate displays
+ *  of the board grid so it makes it easier for the player to make their move.
  */
 void MainWindow::on_SendButton_clicked()
 {

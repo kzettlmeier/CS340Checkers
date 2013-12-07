@@ -31,9 +31,9 @@
   <td id="projectlogo"><img alt="Logo" src="Checkers Pic.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CS 340 Checkers
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">Ver. 1.0</span>
    </div>
-   <div id="projectbrief">A Checkers game with an integrated A.I.</div>
+   <div id="projectbrief">Checkers game with integrated A.I.</div>
   </td>
  </tr>
  </tbody>
@@ -196,7 +196,10 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a3b3d4827430812c8849610301dbf91f3 inherit pub_static_attribs_class_board"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a3b3d4827430812c8849610301dbf91f3">BOARD_LENGTH</a> = 8</td></tr>
 <tr class="separator:a3b3d4827430812c8849610301dbf91f3 inherit pub_static_attribs_class_board"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p>Definition at line <a class="el" href="game_8h_source.html#l00099">99</a> of file <a class="el" href="game_8h_source.html">game.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad59df6562a58a614fda24622d3715b65"></a>
 <div class="memitem">
 <div class="memproto">
@@ -209,6 +212,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="game_8cpp_source.html#l00044">44</a> of file <a class="el" href="game_8cpp_source.html">game.cpp</a>.</p>
 
 </div>
 </div>
@@ -231,11 +236,13 @@ Additional Inherited Members</h2></td></tr>
 <p>This method receives a parameter that tells the method what the current position is, which then the application will use to check to see if any of the adjacent pieces are enemy pieces. First the game will determine if the current piece is a King piece or a regular piece. Then, it will scan to see if there is an opponent's piece adjacent to them, meaning that there is a possibility that the player can make a jump. Once the game detects that an opponent piece is next to them, it will check the piece adjacent to the opponent piece and make sure that the piece adjacent to them is empty; bear in mind, that the application will also keep track to see if the jump is legal, that is, the piece can safely jump a player and still be within the board's dimensions. It will run the same tests for each type of piece (the P1 regular, P2 regular, P1 King, and the P2 King), where the King pieces function slightly different than the regular pieces. The King can jump in any direction, so it then has to check every adjacent piece to see if it can jump. Meanwhile, the regular pieces only need to check above them (player 1 regular) or below them (player 2 regular).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">currentPos</td><td></td></tr>
+    <tr><td class="paramname">currentPos</td><td>The current position of a piece, determined by its coordinates </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if there is a player and there can be a jump, otherwise it will return false </dd></dl>
+
+<p>Definition at line <a class="el" href="game_8cpp_source.html#l00775">775</a> of file <a class="el" href="game_8cpp_source.html">game.cpp</a>.</p>
 
 </div>
 </div>
@@ -263,6 +270,8 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A successful conversion in processing the move of a player </dd></dl>
 
+<p>Definition at line <a class="el" href="game_8cpp_source.html#l00713">713</a> of file <a class="el" href="game_8cpp_source.html">game.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a6d8b525593305e2a573fc7fc13bca103"></a>
@@ -283,11 +292,13 @@ Additional Inherited Members</h2></td></tr>
 <p>After the game makes its computations to authenticate a valid move for a given player, the game does the move, then checks to see if a jump can be made (or has been made). Then after it finishes the calculations, it then converts the integer that was generated earlier back to its corresponding character that is part of the move coordinates when making a move. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">num</td><td></td></tr>
+    <tr><td class="paramname">num</td><td>The number corresponding to a coordinate of a game piece </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the coordinate of the board for a move </dd></dl>
+
+<p>Definition at line <a class="el" href="game_8cpp_source.html#l01380">1380</a> of file <a class="el" href="game_8cpp_source.html">game.cpp</a>.</p>
 
 </div>
 </div>
@@ -309,11 +320,13 @@ Additional Inherited Members</h2></td></tr>
 <p>This method is more or less a decider that decides whether or not a player's piece can be jumped. Similar to the canJumpPlayer method it largely does the same checks to see if the jump that can be made is legal, and if it's legal, then the piece will jump, otherwise, it will not jump anc continue the game. This is largely used to see if another piece can be jumped after the initial jump was made. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">currentPos</td><td></td></tr>
+    <tr><td class="paramname">currentPos</td><td>The current position of a gamepiece </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the new position of the current piece since it jumped, and it must relay the information back to the board. </dd></dl>
+
+<p>Definition at line <a class="el" href="game_8cpp_source.html#l01054">1054</a> of file <a class="el" href="game_8cpp_source.html">game.cpp</a>.</p>
 
 </div>
 </div>
@@ -346,6 +359,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="game_8cpp_source.html#l00074">74</a> of file <a class="el" href="game_8cpp_source.html">game.cpp</a>.</p>
 
 </div>
 </div>
@@ -389,14 +404,16 @@ Additional Inherited Members</h2></td></tr>
 <p>This method is called upon the moveAMove method. What happens is that the game runs a series of error checks (is it inbounds, is the move legal, is the move not filled) and it runs a test to see if when making a move, a jump(s) is possible. If the move is a blank spot, then the method returns the move itself. If the game detects that a jump is possible, it will call up the method to make a jump and force the player to make the jump (as dictated by our game's logic). After the jump is made, then the game will test to see if another jump is possible, which if there results that another jump can be made then the game will force the player to jump once more. We felt that in our design, we had to make the game jump the player by force, or else a more difficult algorithm had to be implemented, which easily increases the difficulty of implementation exponentially.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">newFirstDimension</td><td></td></tr>
-    <tr><td class="paramname">currentFirstDimension</td><td></td></tr>
-    <tr><td class="paramname">newSecondDimension</td><td></td></tr>
-    <tr><td class="paramname">currentSecondDimension</td><td></td></tr>
+    <tr><td class="paramname">newFirstDimension</td><td>The new dimension of the piece after it moved </td></tr>
+    <tr><td class="paramname">currentFirstDimension</td><td>The old dimension of the piece </td></tr>
+    <tr><td class="paramname">newSecondDimension</td><td>The new dimension of the piece after it moved </td></tr>
+    <tr><td class="paramname">currentSecondDimension</td><td>The old dimension of the piece </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>returns the valid move and moves the piece. </dd></dl>
+
+<p>Definition at line <a class="el" href="game_8cpp_source.html#l00186">186</a> of file <a class="el" href="game_8cpp_source.html">game.cpp</a>.</p>
 
 </div>
 </div>
@@ -447,7 +464,9 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the move attempt passes the error checks and is valid. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the move attempt passes the error checks and is valid; otherwise it returns false </dd></dl>
+
+<p>Definition at line <a class="el" href="game_8cpp_source.html#l00451">451</a> of file <a class="el" href="game_8cpp_source.html">game.cpp</a>.</p>
 
 </div>
 </div>
@@ -500,6 +519,8 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the move is valid, otherwise it will be false and an error appears </dd></dl>
 
+<p>Definition at line <a class="el" href="game_8cpp_source.html#l00595">595</a> of file <a class="el" href="game_8cpp_source.html">game.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aad3a58175a91d8235771707620846429"></a>
@@ -551,6 +572,8 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if a vaild move for the player2 regular piece, otherwise it will return false </dd></dl>
 
+<p>Definition at line <a class="el" href="game_8cpp_source.html#l00328">328</a> of file <a class="el" href="game_8cpp_source.html">game.cpp</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -564,6 +587,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="game_8h_source.html#l00106">106</a> of file <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="af0938fa4b54d37a0c3099397a58d3cd7"></a>
@@ -575,6 +600,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="game_8h_source.html#l00103">103</a> of file <a class="el" href="game_8h_source.html">game.h</a>.</p>
 
 </div>
 </div>
@@ -588,6 +615,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="game_8h_source.html#l00102">102</a> of file <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a54d8c544103d5721e83e75c0fb42a4a3"></a>
@@ -599,6 +628,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="game_8h_source.html#l00104">104</a> of file <a class="el" href="game_8h_source.html">game.h</a>.</p>
 
 </div>
 </div>
@@ -612,11 +643,13 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="game_8h_source.html#l00105">105</a> of file <a class="el" href="game_8h_source.html">game.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="game_8h_source.html">game.h</a></li>
-<li><a class="el" href="game_8cpp.html">game.cpp</a></li>
+<li>340Checkers/<a class="el" href="game_8h_source.html">game.h</a></li>
+<li>340Checkers/<a class="el" href="game_8cpp_source.html">game.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -624,7 +657,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_game.html">Game</a></li>
-    <li class="footer">Generated on Sat Nov 30 2013 17:17:40 for CS 340 Checkers by
+    <li class="footer">Generated on Fri Dec 6 2013 20:39:03 for CS 340 Checkers by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

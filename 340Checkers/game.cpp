@@ -12,6 +12,7 @@
  *  \author Kendall Zettlmeier
  *  \version 1.0
  *
+ *  \bug No major bugs found other than the bug specified on the AI.cpp file
  *  \namespace std using namespace identifier
  */
 
@@ -65,7 +66,7 @@ Game::Game()
  * @param player player 1 or player 2
  * @param pieceToMove The selected piece's position
  * @param moveTo The desired destination of the selected piece
- * @return
+ * @return returns true if a legal move can be made; otherwise, it will return false
  *
  *  \var currentPiece either 'o/x' for regular piece on command line
  *  \var currentKingPiece either 'O/X' for King Piece on command line
@@ -176,10 +177,10 @@ bool Game::makeAMove(int player, char *pieceToMove, char *moveTo)
  *  design, we had to make the game jump the player by force, or else a more difficult algorithm had to be
  *  implemented, which easily increases the difficulty of implementation exponentially.
  *
- * @param newFirstDimension
- * @param currentFirstDimension
- * @param newSecondDimension
- * @param currentSecondDimension
+ * @param newFirstDimension The new dimension of the piece after it moved
+ * @param currentFirstDimension The old dimension of the piece
+ * @param newSecondDimension The new dimension of the piece after it moved
+ * @param currentSecondDimension The old dimension of the piece
  * @return returns the valid move and moves the piece.
  */
 bool Game::moveKingP1(int newFirstDimension, int currentFirstDimension, int newSecondDimension, int currentSecondDimension)
@@ -445,7 +446,7 @@ bool Game::moveRegularP2Down(int newFirstDimension, int currentFirstDimension, i
  * @param currentFirstDimension
  * @param newSecondDimension
  * @param currentSecondDimension
- * @return true if the move attempt passes the error checks and is valid.
+ * @return true if the move attempt passes the error checks and is valid; otherwise it returns false
  */
 bool Game::moveKingP2(int newFirstDimension, int currentFirstDimension, int newSecondDimension, int currentSecondDimension)
 {
@@ -768,7 +769,7 @@ int Game::convertCharDimensionToInt(char secondDimension)
  * Meanwhile, the regular pieces only need to check above them (player 1 regular) or below them (player
  * 2 regular).
  *
- * @param currentPos
+ * @param currentPos The current position of a piece, determined by its coordinates
  * @return true if there is a player and there can be a jump, otherwise it will return false
  */
 bool Game::canJumpPlayer(char *currentPos)
@@ -1046,7 +1047,7 @@ bool Game::canJumpPlayer(char *currentPos)
  *  checks to see if the jump that can be made is legal, and if it's legal, then the
  *  piece will jump, otherwise, it will not jump anc continue the game. This is
  *  largely used to see if another piece can be jumped after the initial jump was made.
- * @param currentPos
+ * @param currentPos The current position of a gamepiece
  * @return the new position of the current piece since it jumped, and it must relay the information
  *  back to the board.
  */
@@ -1373,7 +1374,7 @@ string Game::jumpPos(char *currentPos)
  *  been made). Then after it finishes the calculations, it then converts the integer
  *  that was generated earlier back to its corresponding character that is part of the
  *  move coordinates when making a move.
- * @param num
+ * @param num The number corresponding to a coordinate of a game piece
  * @return the coordinate of the board for a move
  */
 char Game::convertIntToChar(int num)

@@ -36,6 +36,13 @@ static const int \hyperlink{class_board_a3b3d4827430812c8849610301dbf91f3}{B\-O\
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+
+
+Definition at line 67 of file board.\-h.
+
+
+
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{\index{Board@{Board}!Board@{Board}}
 \index{Board@{Board}!Board@{Board}}
@@ -47,6 +54,10 @@ static const int \hyperlink{class_board_a3b3d4827430812c8849610301dbf91f3}{B\-O\
 
 
 \hyperlink{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{Board\-::\-Board} A \hyperlink{class_board}{Board} constructor that initializes the board. 
+
+
+
+Definition at line 33 of file board.\-cpp.
 
 
 
@@ -67,6 +78,10 @@ static const int \hyperlink{class_board_a3b3d4827430812c8849610301dbf91f3}{B\-O\
 {\em scene} & \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 108 of file board.\-cpp.
+
 \hypertarget{class_board_ad3e7c6a4070b1dac5b124a550fa0a6fc}{\index{Board@{Board}!display\-Board@{display\-Board}}
 \index{display\-Board@{display\-Board}!Board@{Board}}
 \subsubsection[{display\-Board}]{\setlength{\rightskip}{0pt plus 5cm}void Board\-::display\-Board (
@@ -81,11 +96,15 @@ static const int \hyperlink{class_board_a3b3d4827430812c8849610301dbf91f3}{B\-O\
 
 
 \begin{DoxyParams}{Parameters}
-{\em player1\-Score} & \\
+{\em player1\-Score} & The number of pieces left of player 1 \\
 \hline
-{\em player2\-Score} & \\
+{\em player2\-Score} & The remaining pieces for player 2 \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 78 of file board.\-cpp.
+
 \hypertarget{class_board_a964d67ddc797487f1a018e4c7cd82075}{\index{Board@{Board}!update\-Grid@{update\-Grid}}
 \index{update\-Grid@{update\-Grid}!Board@{Board}}
 \subsubsection[{update\-Grid}]{\setlength{\rightskip}{0pt plus 5cm}void Board\-::update\-Grid (
@@ -97,26 +116,42 @@ static const int \hyperlink{class_board_a3b3d4827430812c8849610301dbf91f3}{B\-O\
 
 \hyperlink{class_board_a964d67ddc797487f1a018e4c7cd82075}{Board\-::update\-Grid} Updates the grid with the current turn and pieces remaining on the board. 
 
-
+The new things added onto this file are the different colors that represent the different pieces in the game. Also, the grid's coordinates that are used to make a player move are now visible on the board, making it easier to find locate a piece on the board. 
 \begin{DoxyParams}{Parameters}
-{\em scene} & \\
+{\em scene} & A Q\-Graphics\-Scene pointer that's used represent objects on the U\-I. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 140 of file board.\-cpp.
+
 
 
 \subsection{Member Data Documentation}
 \hypertarget{class_board_a6e32218e7d8adc57f9d414836d135d96}{\index{Board@{Board}!board@{board}}
 \index{board@{board}!Board@{Board}}
 \subsubsection[{board}]{\setlength{\rightskip}{0pt plus 5cm}char Board\-::board\mbox{[}{\bf B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H}\mbox{]}\mbox{[}{\bf B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H}\mbox{]}}}\label{class_board_a6e32218e7d8adc57f9d414836d135d96}
+
+
+Definition at line 73 of file board.\-h.
+
 \hypertarget{class_board_a3b3d4827430812c8849610301dbf91f3}{\index{Board@{Board}!B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H@{B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H}}
 \index{B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H@{B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H}!Board@{Board}}
 \subsubsection[{B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}const int Board\-::\-B\-O\-A\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H = 8\hspace{0.3cm}{\ttfamily [static]}}}\label{class_board_a3b3d4827430812c8849610301dbf91f3}
+
+
+Definition at line 72 of file board.\-h.
+
 \hypertarget{class_board_acd3e1340f25b2d2371d8a2862e473b15}{\index{Board@{Board}!tiles@{tiles}}
 \index{tiles@{tiles}!Board@{Board}}
 \subsubsection[{tiles}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sq} Board\-::tiles\mbox{[}8\mbox{]}\mbox{[}8\mbox{]}}}\label{class_board_acd3e1340f25b2d2371d8a2862e473b15}
 
 
+Definition at line 71 of file board.\-h.
+
+
+
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{board_8h}{board.\-h}\item 
-\hyperlink{board_8cpp}{board.\-cpp}\end{DoxyCompactItemize}
+340\-Checkers/\hyperlink{board_8h}{board.\-h}\item 
+340\-Checkers/\hyperlink{board_8cpp}{board.\-cpp}\end{DoxyCompactItemize}

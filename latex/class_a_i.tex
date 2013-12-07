@@ -46,6 +46,10 @@ vector$<$ \hyperlink{struct_a_i_1_1moves}{moves} $>$ \hyperlink{class_a_i_afbd7b
 \subsection{Detailed Description}
 The \hyperlink{class_a_i}{A\-I} class. 
 
+Definition at line 36 of file ai.\-h.
+
+
+
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_a_i_a64ec60281e9eb8496f16525615db54b7}{\index{A\-I@{A\-I}!A\-I@{A\-I}}
 \index{A\-I@{A\-I}!AI@{A\-I}}
@@ -57,6 +61,10 @@ The \hyperlink{class_a_i}{A\-I} class.
 
 
 \hyperlink{class_a_i_a64ec60281e9eb8496f16525615db54b7}{A\-I\-::\-A\-I}. 
+
+
+
+Definition at line 34 of file ai.\-cpp.
 
 
 
@@ -72,6 +80,12 @@ The \hyperlink{class_a_i}{A\-I} class.
 
 \hyperlink{class_a_i_a8a7ea06489e3e3dfffbb25fbe384c205}{A\-I\-::check\-All\-Computer\-Moves} This is a method that checks all possible moves for the computer. 
 
+The way it checks for all computer moves is similar to checking for a probable player move It gets all of the positions for every computer piece on the board, which it keeps a separate counter for the available new moves and the number of jumps it may have available.
+
+It computes it current locations in relation to the other player's pieces on the board, while keeping track of what enemy pieces it can jump. If it is able to make a jump for a given piece, then it would give priority for that selected piece and make the jump immediately; otherwise, it would repeat its search for moves for all pieces that can make a legal move. This also uses the same logic for when moving a King piece, the only logical difference being that it has the ability to move in nearly any direction. 
+
+Definition at line 54 of file ai.\-cpp.
+
 \hypertarget{class_a_i_aab57c3d86a7f49616d9ddeefc6978e05}{\index{A\-I@{A\-I}!convert\-Int\-To\-Char@{convert\-Int\-To\-Char}}
 \index{convert\-Int\-To\-Char@{convert\-Int\-To\-Char}!AI@{A\-I}}
 \subsubsection[{convert\-Int\-To\-Char}]{\setlength{\rightskip}{0pt plus 5cm}char A\-I\-::convert\-Int\-To\-Char (
@@ -85,12 +99,16 @@ The \hyperlink{class_a_i}{A\-I} class.
 
 
 \begin{DoxyParams}{Parameters}
-{\em num} & \\
+{\em num} & A number that corresponds to part of the coordinate of a move. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+returns a character converted from an integer 
 \end{DoxyReturn}
+
+
+Definition at line 463 of file ai.\-cpp.
+
 \hypertarget{class_a_i_af048f2550307ee0ff15709d8e1b452b2}{\index{A\-I@{A\-I}!decider@{decider}}
 \index{decider@{decider}!AI@{A\-I}}
 \subsubsection[{decider}]{\setlength{\rightskip}{0pt plus 5cm}string A\-I\-::decider (
@@ -103,8 +121,12 @@ The \hyperlink{class_a_i}{A\-I} class.
 \hyperlink{class_a_i_af048f2550307ee0ff15709d8e1b452b2}{A\-I\-::decider} This is what allows the \hyperlink{class_a_i}{A\-I} to decide which move it should take. 
 
 \begin{DoxyReturn}{Returns}
-
+returns the best move the \hyperlink{class_a_i}{A\-I} will do 
 \end{DoxyReturn}
+
+
+Definition at line 394 of file ai.\-cpp.
+
 \hypertarget{class_a_i_ae19027dd80147020d2aa55fbae3113b3}{\index{A\-I@{A\-I}!remove\-Data@{remove\-Data}}
 \index{remove\-Data@{remove\-Data}!AI@{A\-I}}
 \subsubsection[{remove\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void A\-I\-::remove\-Data (
@@ -118,13 +140,21 @@ The \hyperlink{class_a_i}{A\-I} class.
 
 
 
+Definition at line 493 of file ai.\-cpp.
+
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_a_i_afbd7b83dc6eb3a47fcde351e9a6eb651}{\index{A\-I@{A\-I}!available\-Moves@{available\-Moves}}
 \index{available\-Moves@{available\-Moves}!AI@{A\-I}}
 \subsubsection[{available\-Moves}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf moves}$>$ A\-I\-::available\-Moves}}\label{class_a_i_afbd7b83dc6eb3a47fcde351e9a6eb651}
 
 
+Definition at line 54 of file ai.\-h.
+
+
+
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{ai_8h}{ai.\-h}\item 
-\hyperlink{ai_8cpp}{ai.\-cpp}\end{DoxyCompactItemize}
+340\-Checkers/\hyperlink{ai_8h}{ai.\-h}\item 
+340\-Checkers/\hyperlink{ai_8cpp}{ai.\-cpp}\end{DoxyCompactItemize}

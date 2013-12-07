@@ -9,6 +9,8 @@
  *  \author Shane Lopez
  *  \author Kendall Zettlmeier
  *  \version 1.0
+ *
+ *  \bug No bugs were found with testing.
  */
 
 /*
@@ -19,7 +21,7 @@
 #include <iostream>
 
 /**
- * \namespace std
+ * \namespace std using the std namespace identifier
  */
 using namespace std;
 
@@ -70,8 +72,8 @@ Board::Board()
 /**
  * @brief Board::displayBoard
  *  Displays the current Board with both players' scores (the remaining pieces)
- * @param player1Score
- * @param player2Score
+ * @param player1Score The number of pieces left of player 1
+ * @param player2Score The remaining pieces for player 2
  */
 void Board::displayBoard(int player1Score, int player2Score)
 {
@@ -128,7 +130,12 @@ void Board::addGrid(QGraphicsScene *scene)
 /**
  * @brief Board::updateGrid
  *  Updates the grid with the current turn and pieces remaining on the board.
- * @param scene
+ *
+ *  The new things added onto this file are the different colors that represent the
+ *  different pieces in the game. Also, the grid's coordinates that are used to make
+ *  a player move are now visible on the board, making it easier to find locate a piece
+ *  on the board.
+ * @param scene A QGraphicsScene pointer that's used represent objects on the UI.
  */
 void Board::updateGrid(QGraphicsScene *scene)
 {

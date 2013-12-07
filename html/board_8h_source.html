@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>CS 340 Checkers: board.h Source File</title>
+<title>CS 340 Checkers: 340Checkers/board.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,9 +31,9 @@
   <td id="projectlogo"><img alt="Logo" src="Checkers Pic.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CS 340 Checkers
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">Ver. 1.0</span>
    </div>
-   <div id="projectbrief">A Checkers game with an integrated A.I.</div>
+   <div id="projectbrief">Checkers game with integrated A.I.</div>
   </td>
  </tr>
  </tbody>
@@ -110,64 +110,65 @@ $(document).ready(function(){initNavTree('board_8h_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="board_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * This is the board header file, this is where the board will be stored.</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * This also store the board length, in which if you wanted a bigger board</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  you can do it here.</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * This is also where we have the display board function, which was was used</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  to create the checkers game as a console application.</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#ifndef BOARD_H</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define BOARD_H</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="board_8h.html#a8e24a27ddbc8df73d255819cff590c78">   31</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SQ_S 40</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;QGraphicsScene&gt;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;QtGui&gt;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="board_8h.html#a37dbdc30935031c05304482e1be89d8faf80f9a890089d211842d59625e561f88">   45</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="board_8h.html#a37dbdc30935031c05304482e1be89d8f">color</a>{<a class="code" href="board_8h.html#a37dbdc30935031c05304482e1be89d8faf80f9a890089d211842d59625e561f88">RED</a>,<a class="code" href="board_8h.html#a37dbdc30935031c05304482e1be89d8faf77fb67151d0c18d397069ad8c271ba3">BLACK</a>};</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structsq.html">   46</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structsq.html">sq</a>{</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structsq.html#aed5c1efc6e43c1bf7a230b8b8a373368">   47</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structsq.html#aed5c1efc6e43c1bf7a230b8b8a373368">x</a>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structsq.html#a1b0e5a26db37d818cb634406f2314293">   48</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structsq.html#a1b0e5a26db37d818cb634406f2314293">y</a>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structsq.html#a9456cfcbc3cb1beec5d3254091afa355">   49</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structsq.html#a9456cfcbc3cb1beec5d3254091afa355">color</a>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}<a class="code" href="board_8h.html#a07a2313fe921ff279f333a9888a9f197">sq</a>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_board.html">   64</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_board.html">Board</a> : <span class="keyword">public</span> QGraphicsView</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_board.html#acd3e1340f25b2d2371d8a2862e473b15">   68</a></span>&#160;    <a class="code" href="structsq.html">sq</a> <a class="code" href="class_board.html#acd3e1340f25b2d2371d8a2862e473b15">tiles</a>[8][8];</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_board.html#a3b3d4827430812c8849610301dbf91f3">   69</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="class_board.html#a3b3d4827430812c8849610301dbf91f3">BOARD_LENGTH</a> = 8;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_board.html#a6e32218e7d8adc57f9d414836d135d96">   70</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="class_board.html#a6e32218e7d8adc57f9d414836d135d96">board</a>[<a class="code" href="class_board.html#a3b3d4827430812c8849610301dbf91f3">BOARD_LENGTH</a>][<a class="code" href="class_board.html#a3b3d4827430812c8849610301dbf91f3">BOARD_LENGTH</a>];</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="class_board.html#a9ee491d4fea680cf69b033374a9fdfcb">Board</a>();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#ad3e7c6a4070b1dac5b124a550fa0a6fc">displayBoard</a>(<span class="keywordtype">int</span> player1Score, <span class="keywordtype">int</span> player2Score);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#a799c675452ae1a6d3dd6b2058c88f92a">addGrid</a>(QGraphicsScene *scene);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#a964d67ddc797487f1a018e4c7cd82075">updateGrid</a>(QGraphicsScene *scene);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif // BOARD_H</span></div>
-<div class="ttc" id="class_board_html_a3b3d4827430812c8849610301dbf91f3"><div class="ttname"><a href="class_board.html#a3b3d4827430812c8849610301dbf91f3">Board::BOARD_LENGTH</a></div><div class="ttdeci">static const int BOARD_LENGTH</div><div class="ttdef"><b>Definition:</b> board.h:69</div></div>
-<div class="ttc" id="class_board_html_a799c675452ae1a6d3dd6b2058c88f92a"><div class="ttname"><a href="class_board.html#a799c675452ae1a6d3dd6b2058c88f92a">Board::addGrid</a></div><div class="ttdeci">void addGrid(QGraphicsScene *scene)</div><div class="ttdoc">Board::addGrid This will generate the graphical grid and create a GUI with the visual board...</div><div class="ttdef"><b>Definition:</b> board.cpp:106</div></div>
-<div class="ttc" id="structsq_html_a9456cfcbc3cb1beec5d3254091afa355"><div class="ttname"><a href="structsq.html#a9456cfcbc3cb1beec5d3254091afa355">sq::color</a></div><div class="ttdeci">int color</div><div class="ttdef"><b>Definition:</b> board.h:49</div></div>
-<div class="ttc" id="class_board_html_a6e32218e7d8adc57f9d414836d135d96"><div class="ttname"><a href="class_board.html#a6e32218e7d8adc57f9d414836d135d96">Board::board</a></div><div class="ttdeci">char board[BOARD_LENGTH][BOARD_LENGTH]</div><div class="ttdef"><b>Definition:</b> board.h:70</div></div>
-<div class="ttc" id="structsq_html"><div class="ttname"><a href="structsq.html">sq</a></div><div class="ttdoc">The color enumA structure containing the values of a square, which include its x and y position and t...</div><div class="ttdef"><b>Definition:</b> board.h:46</div></div>
-<div class="ttc" id="board_8h_html_a37dbdc30935031c05304482e1be89d8f"><div class="ttname"><a href="board_8h.html#a37dbdc30935031c05304482e1be89d8f">color</a></div><div class="ttdeci">color</div><div class="ttdef"><b>Definition:</b> board.h:45</div></div>
-<div class="ttc" id="class_board_html"><div class="ttname"><a href="class_board.html">Board</a></div><div class="ttdef"><b>Definition:</b> board.h:64</div></div>
-<div class="ttc" id="class_board_html_a9ee491d4fea680cf69b033374a9fdfcb"><div class="ttname"><a href="class_board.html#a9ee491d4fea680cf69b033374a9fdfcb">Board::Board</a></div><div class="ttdeci">Board()</div><div class="ttdoc">Board::Board A Board constructor that initializes the board. </div><div class="ttdef"><b>Definition:</b> board.cpp:31</div></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * This is the board header file, this is where the board will be stored.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * This also store the board length, in which if you wanted a bigger board</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  you can do it here.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * This is also where we have the display board function, which was was used</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  to create the checkers game as a console application.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifndef BOARD_H</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define BOARD_H</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="board_8h.html#a8e24a27ddbc8df73d255819cff590c78">   33</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SQ_S 40</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;QGraphicsScene&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;QtGui&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;QGraphicsView&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="board_8h.html#a37dbdc30935031c05304482e1be89d8faf80f9a890089d211842d59625e561f88">   48</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="board_8h.html#a37dbdc30935031c05304482e1be89d8f">color</a>{<a class="code" href="board_8h.html#a37dbdc30935031c05304482e1be89d8faf80f9a890089d211842d59625e561f88">RED</a>,<a class="code" href="board_8h.html#a37dbdc30935031c05304482e1be89d8faf77fb67151d0c18d397069ad8c271ba3">BLACK</a>};</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structsq.html">   49</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structsq.html">sq</a>{</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="structsq.html#aed5c1efc6e43c1bf7a230b8b8a373368">   50</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structsq.html#aed5c1efc6e43c1bf7a230b8b8a373368">x</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structsq.html#a1b0e5a26db37d818cb634406f2314293">   51</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structsq.html#a1b0e5a26db37d818cb634406f2314293">y</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="structsq.html#a9456cfcbc3cb1beec5d3254091afa355">   52</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structsq.html#a9456cfcbc3cb1beec5d3254091afa355">color</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}<a class="code" href="board_8h.html#a07a2313fe921ff279f333a9888a9f197">sq</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_board.html">   67</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_board.html">Board</a> : <span class="keyword">public</span> QGraphicsView</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_board.html#acd3e1340f25b2d2371d8a2862e473b15">   71</a></span>&#160;    <a class="code" href="structsq.html">sq</a> <a class="code" href="class_board.html#acd3e1340f25b2d2371d8a2862e473b15">tiles</a>[8][8];</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_board.html#a3b3d4827430812c8849610301dbf91f3">   72</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="class_board.html#a3b3d4827430812c8849610301dbf91f3">BOARD_LENGTH</a> = 8;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_board.html#a6e32218e7d8adc57f9d414836d135d96">   73</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="class_board.html#a6e32218e7d8adc57f9d414836d135d96">board</a>[<a class="code" href="class_board.html#a3b3d4827430812c8849610301dbf91f3">BOARD_LENGTH</a>][<a class="code" href="class_board.html#a3b3d4827430812c8849610301dbf91f3">BOARD_LENGTH</a>];</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="class_board.html#a9ee491d4fea680cf69b033374a9fdfcb">Board</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#ad3e7c6a4070b1dac5b124a550fa0a6fc">displayBoard</a>(<span class="keywordtype">int</span> player1Score, <span class="keywordtype">int</span> player2Score);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#a799c675452ae1a6d3dd6b2058c88f92a">addGrid</a>(QGraphicsScene *scene);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#a964d67ddc797487f1a018e4c7cd82075">updateGrid</a>(QGraphicsScene *scene);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif // BOARD_H</span></div>
+<div class="ttc" id="class_board_html_a3b3d4827430812c8849610301dbf91f3"><div class="ttname"><a href="class_board.html#a3b3d4827430812c8849610301dbf91f3">Board::BOARD_LENGTH</a></div><div class="ttdeci">static const int BOARD_LENGTH</div><div class="ttdef"><b>Definition:</b> <a href="board_8h_source.html#l00072">board.h:72</a></div></div>
+<div class="ttc" id="class_board_html_a799c675452ae1a6d3dd6b2058c88f92a"><div class="ttname"><a href="class_board.html#a799c675452ae1a6d3dd6b2058c88f92a">Board::addGrid</a></div><div class="ttdeci">void addGrid(QGraphicsScene *scene)</div><div class="ttdoc">Board::addGrid This will generate the graphical grid and create a GUI with the visual board...</div><div class="ttdef"><b>Definition:</b> <a href="board_8cpp_source.html#l00108">board.cpp:108</a></div></div>
+<div class="ttc" id="structsq_html_a9456cfcbc3cb1beec5d3254091afa355"><div class="ttname"><a href="structsq.html#a9456cfcbc3cb1beec5d3254091afa355">sq::color</a></div><div class="ttdeci">int color</div><div class="ttdef"><b>Definition:</b> <a href="board_8h_source.html#l00052">board.h:52</a></div></div>
+<div class="ttc" id="class_board_html_a6e32218e7d8adc57f9d414836d135d96"><div class="ttname"><a href="class_board.html#a6e32218e7d8adc57f9d414836d135d96">Board::board</a></div><div class="ttdeci">char board[BOARD_LENGTH][BOARD_LENGTH]</div><div class="ttdef"><b>Definition:</b> <a href="board_8h_source.html#l00073">board.h:73</a></div></div>
+<div class="ttc" id="structsq_html"><div class="ttname"><a href="structsq.html">sq</a></div><div class="ttdoc">The color enumA structure containing the values of a square, which include its x and y position and t...</div><div class="ttdef"><b>Definition:</b> <a href="board_8h_source.html#l00049">board.h:49</a></div></div>
+<div class="ttc" id="board_8h_html_a37dbdc30935031c05304482e1be89d8f"><div class="ttname"><a href="board_8h.html#a37dbdc30935031c05304482e1be89d8f">color</a></div><div class="ttdeci">color</div><div class="ttdef"><b>Definition:</b> <a href="board_8h_source.html#l00048">board.h:48</a></div></div>
+<div class="ttc" id="class_board_html"><div class="ttname"><a href="class_board.html">Board</a></div><div class="ttdef"><b>Definition:</b> <a href="board_8h_source.html#l00067">board.h:67</a></div></div>
+<div class="ttc" id="class_board_html_a9ee491d4fea680cf69b033374a9fdfcb"><div class="ttname"><a href="class_board.html#a9ee491d4fea680cf69b033374a9fdfcb">Board::Board</a></div><div class="ttdeci">Board()</div><div class="ttdoc">Board::Board A Board constructor that initializes the board. </div><div class="ttdef"><b>Definition:</b> <a href="board_8cpp_source.html#l00033">board.cpp:33</a></div></div>
 <div class="ttc" id="board_8h_html_a07a2313fe921ff279f333a9888a9f197"><div class="ttname"><a href="board_8h.html#a07a2313fe921ff279f333a9888a9f197">sq</a></div><div class="ttdeci">struct sq sq</div></div>
-<div class="ttc" id="structsq_html_aed5c1efc6e43c1bf7a230b8b8a373368"><div class="ttname"><a href="structsq.html#aed5c1efc6e43c1bf7a230b8b8a373368">sq::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> board.h:47</div></div>
-<div class="ttc" id="structsq_html_a1b0e5a26db37d818cb634406f2314293"><div class="ttname"><a href="structsq.html#a1b0e5a26db37d818cb634406f2314293">sq::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> board.h:48</div></div>
-<div class="ttc" id="class_board_html_ad3e7c6a4070b1dac5b124a550fa0a6fc"><div class="ttname"><a href="class_board.html#ad3e7c6a4070b1dac5b124a550fa0a6fc">Board::displayBoard</a></div><div class="ttdeci">void displayBoard(int player1Score, int player2Score)</div><div class="ttdoc">Board::displayBoard Displays the current Board with both players&amp;#39; scores (the remaining pieces) ...</div><div class="ttdef"><b>Definition:</b> board.cpp:76</div></div>
-<div class="ttc" id="class_board_html_acd3e1340f25b2d2371d8a2862e473b15"><div class="ttname"><a href="class_board.html#acd3e1340f25b2d2371d8a2862e473b15">Board::tiles</a></div><div class="ttdeci">sq tiles[8][8]</div><div class="ttdef"><b>Definition:</b> board.h:68</div></div>
-<div class="ttc" id="board_8h_html_a37dbdc30935031c05304482e1be89d8faf77fb67151d0c18d397069ad8c271ba3"><div class="ttname"><a href="board_8h.html#a37dbdc30935031c05304482e1be89d8faf77fb67151d0c18d397069ad8c271ba3">BLACK</a></div><div class="ttdef"><b>Definition:</b> board.h:45</div></div>
-<div class="ttc" id="board_8h_html_a37dbdc30935031c05304482e1be89d8faf80f9a890089d211842d59625e561f88"><div class="ttname"><a href="board_8h.html#a37dbdc30935031c05304482e1be89d8faf80f9a890089d211842d59625e561f88">RED</a></div><div class="ttdef"><b>Definition:</b> board.h:45</div></div>
-<div class="ttc" id="class_board_html_a964d67ddc797487f1a018e4c7cd82075"><div class="ttname"><a href="class_board.html#a964d67ddc797487f1a018e4c7cd82075">Board::updateGrid</a></div><div class="ttdeci">void updateGrid(QGraphicsScene *scene)</div><div class="ttdoc">Board::updateGrid Updates the grid with the current turn and pieces remaining on the board...</div><div class="ttdef"><b>Definition:</b> board.cpp:133</div></div>
+<div class="ttc" id="structsq_html_aed5c1efc6e43c1bf7a230b8b8a373368"><div class="ttname"><a href="structsq.html#aed5c1efc6e43c1bf7a230b8b8a373368">sq::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="board_8h_source.html#l00050">board.h:50</a></div></div>
+<div class="ttc" id="structsq_html_a1b0e5a26db37d818cb634406f2314293"><div class="ttname"><a href="structsq.html#a1b0e5a26db37d818cb634406f2314293">sq::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="board_8h_source.html#l00051">board.h:51</a></div></div>
+<div class="ttc" id="class_board_html_ad3e7c6a4070b1dac5b124a550fa0a6fc"><div class="ttname"><a href="class_board.html#ad3e7c6a4070b1dac5b124a550fa0a6fc">Board::displayBoard</a></div><div class="ttdeci">void displayBoard(int player1Score, int player2Score)</div><div class="ttdoc">Board::displayBoard Displays the current Board with both players&amp;#39; scores (the remaining pieces) ...</div><div class="ttdef"><b>Definition:</b> <a href="board_8cpp_source.html#l00078">board.cpp:78</a></div></div>
+<div class="ttc" id="class_board_html_acd3e1340f25b2d2371d8a2862e473b15"><div class="ttname"><a href="class_board.html#acd3e1340f25b2d2371d8a2862e473b15">Board::tiles</a></div><div class="ttdeci">sq tiles[8][8]</div><div class="ttdef"><b>Definition:</b> <a href="board_8h_source.html#l00071">board.h:71</a></div></div>
+<div class="ttc" id="board_8h_html_a37dbdc30935031c05304482e1be89d8faf77fb67151d0c18d397069ad8c271ba3"><div class="ttname"><a href="board_8h.html#a37dbdc30935031c05304482e1be89d8faf77fb67151d0c18d397069ad8c271ba3">BLACK</a></div><div class="ttdef"><b>Definition:</b> <a href="board_8h_source.html#l00048">board.h:48</a></div></div>
+<div class="ttc" id="board_8h_html_a37dbdc30935031c05304482e1be89d8faf80f9a890089d211842d59625e561f88"><div class="ttname"><a href="board_8h.html#a37dbdc30935031c05304482e1be89d8faf80f9a890089d211842d59625e561f88">RED</a></div><div class="ttdef"><b>Definition:</b> <a href="board_8h_source.html#l00048">board.h:48</a></div></div>
+<div class="ttc" id="class_board_html_a964d67ddc797487f1a018e4c7cd82075"><div class="ttname"><a href="class_board.html#a964d67ddc797487f1a018e4c7cd82075">Board::updateGrid</a></div><div class="ttdeci">void updateGrid(QGraphicsScene *scene)</div><div class="ttdoc">Board::updateGrid Updates the grid with the current turn and pieces remaining on the board...</div><div class="ttdef"><b>Definition:</b> <a href="board_8cpp_source.html#l00140">board.cpp:140</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="board_8h.html">board.h</a></li>
-    <li class="footer">Generated on Sat Nov 30 2013 17:17:40 for CS 340 Checkers by
+    <li class="navelem"><a class="el" href="dir_3b8e419d298cde21fe3fef336bd56aa8.html">340Checkers</a></li><li class="navelem"><a class="el" href="board_8h.html">board.h</a></li>
+    <li class="footer">Generated on Fri Dec 6 2013 20:39:02 for CS 340 Checkers by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>
